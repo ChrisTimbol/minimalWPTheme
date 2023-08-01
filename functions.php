@@ -44,5 +44,15 @@ add_action('init', 'register_my_menus') // add to wp
         // search bar
     // fix buttons
 */
+
+/* 
+7/31/
+- spacing for nav figure out later
+- font
+- spacing for title
+- page.php
+- single.php
+- footer.php
+*/
 ?>
 
