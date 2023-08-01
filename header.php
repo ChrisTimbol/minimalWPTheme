@@ -8,23 +8,20 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
-
-    <div class="pageContainer">
+<body <?php body_class(); ?>> <!-- can be used for adding styling to certain pages per page class -->
+    <div class="page-container">
         <header class="header">
-            <h1 class="Logo-float-left">
-                <a href="#"><strong>Blog</strong><a>
+            <h1 class="logo-title">
+                TitleBlog
             </h1>
-
-            <nav class="navbar">
-                <ul class="navlinks">
-                    <li><a href="home.asp">Home</a></li>
-                    <li><a href="portfolio.asp">Portfolio</a></li>
-                    <li><a href="features.asp">Features</a></li>
-                    <li><a href="about.asp">About me</a></li>
-                    <li><a href="contact.asp">Contact</a></li>
-                    <li><a href="search.asp">Search</a></li>
-                </ul>
-            </nav>
-
+            <?php // inserts navigation menu here
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'header-menu',
+                    'menu_class' => 'navlinks', // css class to use for the ul element
+                    'container' => 'nav',
+                    'container_class' => 'navbar',
+                )
+            );
+            ?>
         </header>

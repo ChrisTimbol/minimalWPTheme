@@ -20,6 +20,7 @@
           <?php the_content() ?>
         </p>
 
+        <!-- Fix button continue -->
         <a href="" class="continueButton">Continue reading -></a>
 
       </article>
@@ -31,6 +32,4 @@
 
 </main> <!-- End of content -->
 
-<?php
-/* get_sidebar(); */
-get_footer();
+</div>
