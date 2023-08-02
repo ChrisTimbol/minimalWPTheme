@@ -7,10 +7,11 @@ a {   /* Remove default link styling */
     text-decoration: none;
 }
 
-.header {
-/*     display: flex; */
-/*     flex-direction: column;
-    align-items: center;  */
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  
 }
 
 .navbar {
@@ -27,19 +28,17 @@ a {   /* Remove default link styling */
 } 
 
 .navlinks { 
-    border: 1px solid red;
-    padding: 10px;
+   
 }
-
 
 .sub-menu { 
     display: none;
     position: absolute;
     flex-direction: column; 
     padding: 0;
-    margin: 0;
     border: 1px solid #ccc;
-
+    z-index: 2;
+    background: white;
 }
 
 .sub-menu:hover {
@@ -48,11 +47,13 @@ a {   /* Remove default link styling */
     
 }
 .sub-menu li{
+    margin: 0 0.25rem;
     padding: 10px;
+    z-index: 2;
+    background: white;
     padding-left: 0;
     padding-right: 0;
     border-bottom: 1px dotted #ccc;
-   
 }
 
 .sub-menu li:hover {
@@ -68,8 +69,6 @@ a {   /* Remove default link styling */
     justify-content: space-around;
     //@font-face
 }
-
-
 
 /*     color: #444;
     letter-spacing: 1px;

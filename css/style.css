@@ -9,21 +9,7 @@ body { /* Centers page-container */
 .page-container { /* All of content Container  */
     max-width: 1366px;
 }
-.header{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-  
-}
 
-
-
-/*     color: #444;
-    letter-spacing: 1px;
-    font-weight: 400;
-    display:flex;
-    flex-direction: column;
-    align-items: center; */
 
 .post{
     display: flex;

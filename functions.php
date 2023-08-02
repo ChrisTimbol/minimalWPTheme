@@ -18,41 +18,20 @@ function register_my_menus(){ // registers menu location in WP
 
 add_action('init', 'register_my_menus') // add to wp
 
-//http://minimalistic-site.local/
-//http://minimalistic-site.local/wp-admin/nav-menus.php?menu=16
-//https://chat.openai.com/
-
-
 /*
-    post or page template?
-    figure out links to pages and what the pages will be laid out
-    links on post buttons
-    portfolio layout
-    add option to put blog on a seperate page
-    add about page
-    font
-    color scheme
+    - finish layout of page.php and single.php
+    - Create about.php,  portfolio.php
+    - comment.php
+    - 404.php
+    
+    - Search bar
+    - navbar sizing on page.php
+    - font
+    - color scheme
+    - fix index.php blog post buttons
 
-    // Page layout
-    // Fix navbar layout and buttons
-    // find a nice title font and research font in wordpress
-    // complete single.php  for single post
-    // create a 
-        // page-about.php
-        // page-portfolio.php
-        // create a features tab with a dropdown to files
-        // search bar
-    // fix buttons
-*/
+   
 
-/* 
-7/31/
-- spacing for nav figure out later
-- font
-- spacing for title
-- page.php
-- single.php
-- footer.php
 */
 ?>
 

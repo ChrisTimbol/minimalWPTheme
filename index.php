@@ -31,5 +31,6 @@
   ?>
 
 </main> <!-- End of content -->
+<?php get_footer(); ?>
 
-</div>
+</div><!-- End of page-container  -->
