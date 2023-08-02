@@ -1,10 +1,12 @@
 <?php
+/* 
+ *  enqueues style.css to wordpress 
+ */
 
-/* enqueues style.css to wordpress */
 function theme_files(){
-    wp_enqueue_style( 'main-style', get_theme_file_uri('/css/style.css')); 
+    wp_enqueue_style( 'main-style', get_theme_file_uri('/css/index.css')); 
     wp_enqueue_style( 'header-style', get_theme_file_uri('/css/header.css')); 
-   
+    wp_enqueue_style( 'footer-style', get_theme_file_uri('/css/footer.css')); 
 }
 add_action('wp_enqueue_scripts', 'theme_files');
  
@@ -29,7 +31,7 @@ add_action('init', 'register_my_menus') // add to wp
     - font
     - color scheme
     - fix index.php blog post buttons
-
+    - esc all 
    
 
 */

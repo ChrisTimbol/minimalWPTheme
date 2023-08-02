@@ -7,31 +7,31 @@ a {   /* Remove default link styling */
     text-decoration: none;
 }
 
-.header{
+.header{ /* title , navbar */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-  
+    align-items: center;
 }
 
-.navbar {
+.navbar { /* navbar  */
     width: 100%;
- /*    line-height: 0.1; */
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: inset 0 0 12px rgba(0,0,0,5%);
 }
 
-.navbar ul li:hover > .sub-menu {
+.navbar ul li:hover > .sub-menu { /* Dropdown menu on hover */
     display: flex;
 
 } 
 
-.navlinks { 
-   
+.navlinks {  /* class added to navbar ul elements in functions.php */
+    display: flex;
+    justify-content: space-around;
 }
 
-.sub-menu { 
+.sub-menu { /* Layout of dropdown menu for navbar */
     display: none;
     position: absolute;
     flex-direction: column; 
@@ -41,12 +41,12 @@ a {   /* Remove default link styling */
     background: white;
 }
 
-.sub-menu:hover {
+.sub-menu:hover { /* Layout of dropdown menu for navbar */
     display: flex;
     transition-delay:1.5s;
     
 }
-.sub-menu li{
+.sub-menu li{ /* Layout of dropdown menu for navbar */
     margin: 0 0.25rem;
     padding: 10px;
     z-index: 2;
@@ -56,24 +56,11 @@ a {   /* Remove default link styling */
     border-bottom: 1px dotted #ccc;
 }
 
-.sub-menu li:hover {
+.sub-menu li:hover { /* Layout of dropdown menu for navbar */
     cursor: pointer;
 }
   
-.sub-menu li a{
+.sub-menu li a{ /* Layout of dropdown menu for navbar */
     color: inherit;
 }
 
-.navlinks {
-    display: flex;
-    justify-content: space-around;
-    //@font-face
-}
-
-/*     color: #444;
-    letter-spacing: 1px;
-    font-weight: 400;
-    display:flex;
-    flex-direction: column;
-    align-items: center; */
-/*     border: 1px solid green */
