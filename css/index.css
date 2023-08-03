@@ -3,7 +3,7 @@ body { /* Centers page-container */
     display: flex;
     align-items: center;
     justify-content: center;
-
+    font-family: "Coustard", Georgia, serif;
 }
 
 .page-container { /* All of content on page container  */
@@ -24,6 +24,7 @@ body { /* Centers page-container */
     padding: 1.25em 0 2.5em 0;
     color: black;
     line-height: 1.4;
+    
     letter-spacing: 2px;
 }
 
@@ -33,6 +34,9 @@ body { /* Centers page-container */
     padding: 0;
 }
 
+.title:hover {
+    background: #ccc;
+}
 .post-details {
     font-size: 0.8rem;
 }

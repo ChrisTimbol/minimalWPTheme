@@ -24,7 +24,7 @@
           <div class="post-description">
             <?php the_content() ?>
           </div>
-          <a href="<?php the_permalink(); ?>" class="continueButton">Continue reading -></a>
+          <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
         </article>
     <?php
       } /* end of while */

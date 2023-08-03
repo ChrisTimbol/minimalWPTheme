@@ -21,8 +21,10 @@ function register_my_menus(){ // registers menu location in WP
 add_action('init', 'register_my_menus') // add to wp
 
 /*
-    - finish layout of page.php and single.php
-    - Create about.php,  portfolio.php
+    - page.php
+    - single.php
+    - about.php (custom page template)
+    - portfolio.php (custom page template make selectable by comment section at the top of portfolio.php etc... )
     - comment.php
     - 404.php
     

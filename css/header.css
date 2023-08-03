@@ -19,9 +19,11 @@ a {   /* Remove default link styling */
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
     box-shadow: inset 0 0 12px rgba(0,0,0,5%);
+    color: #333;
+    font-family: "Coustard", Georgia, serif;
 }
 
-.navbar ul li:hover > .sub-menu { /* Dropdown menu on hover */
+.navbar ul li:hover > .sub-menu { /* Dropdown menu on hover of a li */
     display: flex;
 
 } 
@@ -39,6 +41,8 @@ a {   /* Remove default link styling */
     border: 1px solid #ccc;
     z-index: 2;
     background: white;
+    width: max-content;
+    font-size: 0.8rem;
 }
 
 .sub-menu:hover { /* Layout of dropdown menu for navbar */
@@ -54,6 +58,8 @@ a {   /* Remove default link styling */
     padding-left: 0;
     padding-right: 0;
     border-bottom: 1px dotted #ccc;
+    width: max-content;
+  
 }
 
 .sub-menu li:hover { /* Layout of dropdown menu for navbar */
