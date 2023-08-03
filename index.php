@@ -1,9 +1,10 @@
-<!-- 
- /* 
+<?php
+/*
   *  Main
+  *
   */
- -->
-<?php get_header() ?>
+get_header()
+?>
 <main id="primary" class="site-main">
   <section class="blog-container">
     <?php
@@ -22,7 +23,7 @@
           </div>
 
           <div class="post-description">
-            <?php the_content() ?>
+            <?php the_excerpt() ?>
           </div>
           <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
         </article>

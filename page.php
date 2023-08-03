@@ -1,38 +1,31 @@
 <?php
-
-/**
- * The template is used for displaying static pages on your site.
+/*
+ * The template is used for displaying  pages on your site.
  *
  */
-get_header(); ?>
-
-<?php
-if (have_posts()) {
-  /* using if statement allows us to conditionally generate container only if reason too; else no container */
-  while (have_posts()) {
-    the_post();  // get data ready for each post
+get_header();
 ?>
-    <article class="post">
+<main class="page-main">
+  <section class="page-container">
 
-      <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-      <div>
-        Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y') ?> in <?php echo get_the_category_list(', ') ?>
-      </div>
-
-      <p>
-        <?php the_content() ?>
-      </p>
-
-      <!-- Fix button continue -->
-      <a href="" class="continueButton">Continue reading -></a>
-
-    </article>
-
-<?php
-  } /* end of while */
-} /* end of if */
-?>
+    <?php
+    if (have_posts()) {
+      while (have_posts()) {
+        the_post();
+    ?>
+    
+        <article class="page-post">
+        THIS IS USING PAGE.PHP TEMPLATE
+          <h2 class="page-title"><?php the_title(); ?></h2>
+          <p>
+            <?php the_content(); ?>
+          </p>
+        </article>
+    <?php
+      } /* end of while */
+    } /* end of if */
+    ?>
+  </section>
 </main><!-- End of content -->
 <?php get_footer(); ?>
-</div><!-- End of page-container  -->
+</div><!-- End of page-wrapper from header.php  -->
