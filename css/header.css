@@ -12,6 +12,7 @@ a {   /* Remove default link styling */
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .navbar { /* navbar  */

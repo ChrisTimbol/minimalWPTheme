@@ -1,17 +1,16 @@
 
 body { /* Centers page-container */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: "Coustard", Georgia, serif;
+    min-height: 100vh; /* Ensure the body takes at least the viewport height */
+    margin: 0; /* Reset default margin to ensure full width */
 }
 
-.page-wrapper { /* All of content on page container  */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    width: 1366px;
+.blog-container {
+    max-width: 1366px; 
 }
 
 .post{
@@ -19,7 +18,7 @@ body { /* Centers page-container */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    max-width: 1366px;
+    /* max-width: 1366px; */
     width: 100%;
     padding: 1.25em 0 2.5em 0;
     color: black;
@@ -31,6 +30,7 @@ body { /* Centers page-container */
     font-size: 1.9rem;
     margin: 0;
     padding: 0;
+    width: max-content;
 }
 
 .title:hover {

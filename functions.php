@@ -22,19 +22,18 @@ function register_my_menus(){ // registers menu location in WP
 add_action('init', 'register_my_menus') // add to wp
 
 /*
-    - page.php figure out loop the:post for single pages and how it actually iterates
-    - single.php
-    - about.php (custom page template)
+    - Make more changes to page/single.php . The only thing seperating page/single from index is the title/continue link
+    - figure out loop the:post for single pages and how it actually iterates
     - portfolio.php (custom page template make selectable by comment section at the top of portfolio.php etc... )
     - comment.php
+    - search.php
     - 404.php
-    
-    - Search bar
-    - navbar sizing on page.php
+    - sidebar
+    - footer columns
+    - google fonts
+    - ajax?
     - font
-    - color scheme
-    - fix index.php blog post buttons
-    - esc all 
+    - esc all safety
    
 
 */

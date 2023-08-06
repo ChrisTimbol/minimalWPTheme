@@ -35,5 +35,3 @@ get_header()
   </section> <!-- End of blog-container -->
 </main> <!-- End of content -->
 <?php get_footer(); ?>
-
-</div><!-- End of page-container  -->
