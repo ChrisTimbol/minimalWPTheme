@@ -18,12 +18,30 @@ function register_my_menus(){ // registers menu location in WP
         )
         );
 }
+add_action('init', 'register_my_menus'); // add to wp
 
-add_action('init', 'register_my_menus') // add to wp
+function register_portfolio_post_type(){ // adds portfolio post type to admnin bar
+    $labels = array(
+        'name'                  => _x( 'Projects', 'Post Type General Name', 'text_domain' ),
+        'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'text_domain' ),
+    );
+
+    $args = array(
+        'label' => __( 'Portfolio', 'text domain'),
+        'labels'                => $labels,
+        'description' => __('a place for portfolio items'),
+        'public' => true,
+        'hierarchical' => false,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_position'         => 4,
+
+    );
+    register_post_type( 'portfolio', $args );
+}
+add_action('init', 'register_portfolio_post_type');
 
 /*
-    - Make more changes to page/single.php . The only thing seperating page/single from index is the title/continue link
-    - figure out loop the:post for single pages and how it actually iterates
     - portfolio.php (custom page template make selectable by comment section at the top of portfolio.php etc... )
     - comment.php
     - search.php
@@ -35,6 +53,11 @@ add_action('init', 'register_my_menus') // add to wp
     - font
     - esc all safety
    
+
+    - Create projects taxonomy in functions
+    - Create portfolio tab to create new
+    - Pull category titles organize them into a list div
+    - 
 
 */
 ?>
