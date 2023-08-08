@@ -11,6 +11,7 @@
 <body <?php body_class(); ?>> <!-- can be used for adding styling to certain pages per page class -->
 <!--     <div class="page-wrapper"> -->
         <header class="header">
+
             <h1 class="logo-title">
                 TitleBlog
             </h1>
