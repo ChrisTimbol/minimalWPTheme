@@ -8,10 +8,9 @@
     
  -->
 
+<?php get_header() ?>
 
-
-
-<main class="site-main"><!-- same as index.php containers -->
+<main class="page-container"><!-- same as index.php containers -->
     <section class="project-categories"><!-- same as index.php containers -->
         <?php /* use to get the archive listing? */
         $args = array(
@@ -48,10 +47,10 @@
             'posts_per_page' => 10, // Number of posts to display
         );
 
-        $custom_query = new WP_Query($args);
+        $custom_query = new WP_Query($args); 
 
         if ($custom_query->have_posts()) {
-            while ($custom_query->have_posts()) {
+            while ($custom_query->have_posts()) { /* Loops through projects in project admin menu */
                 $custom_query->the_post();
         ?>
                 <div>

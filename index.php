@@ -5,7 +5,7 @@
   */
 get_header()
 ?>
-<main class="site-main">
+<main class="page-container">
   <section class="blog-container">
     <?php
     if (have_posts()) { /* using if statement allows us to conditionally generate container only if reason too; else no container */
@@ -14,18 +14,21 @@ get_header()
     ?>
         <article class="post">
           <h2 class="title">
-            <a href="<?php the_permalink(); ?>">
+            <a class="title" href="<?php the_permalink(); ?>">
               <?php the_title(); ?>
-              <?php the_post_thumbnail(); ?>
+
             </a>
           </h2>
-          <div class="post-details">
+          <a class="thumbnail-link" href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail(); ?>
+          </a>
+          <p class="post-date-category">
             Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y') ?> in <?php echo get_the_category_list(', ') ?>
-          </div>
+          </p>
 
           <div class="post-description">
-            <?php the_excerpt() ?>
-          </div>
+            <?php the_excerpt(); ?>
+      </div>
           <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
         </article>
     <?php
