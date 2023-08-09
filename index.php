@@ -5,7 +5,7 @@
   */
 get_header()
 ?>
-<main id="primary" class="site-main">
+<main class="site-main">
   <section class="blog-container">
     <?php
     if (have_posts()) { /* using if statement allows us to conditionally generate container only if reason too; else no container */
@@ -16,6 +16,7 @@ get_header()
           <h2 class="title">
             <a href="<?php the_permalink(); ?>">
               <?php the_title(); ?>
+              <?php the_post_thumbnail(); ?>
             </a>
           </h2>
           <div class="post-details">
