@@ -1,18 +1,24 @@
 
-body { /* Centers page-container */
+body { /* Centers main-container */
     font-family: "Coustard", Georgia, serif;
     min-height: 100vh; /* Ensure the body takes at least the viewport height */
     margin: 0; /* Reset default margin to ensure full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.page-container{
+.main-container{ 
     display: flex;
     justify-content: center;
-  
+    flex-direction: column; 
+    
+    max-width: 1366px;
+
 }
 
 .blog-container {
-    max-width: 1366px;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -46,7 +52,6 @@ body { /* Centers page-container */
     font-size: 0.8rem;
 }
 .post-description {
-    border: 2px solid red;
     font-size: 1.05rem;
     line-height: 1.2;
     max-width: 900px;

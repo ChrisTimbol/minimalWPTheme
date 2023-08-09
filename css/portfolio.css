@@ -1,0 +1,24 @@
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1366px;
+}
+.project-category-container {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    border: 1px solid red;
+} 
+
+.project-grid-container {
+  
+    max-width: 100%;
+    border: 1px solid red;
+}
+
+.thumbnail-container{
+
+
+}

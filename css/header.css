@@ -7,13 +7,13 @@ a {   /* Remove default link styling */
     text-decoration: none;
 }
 
-.header{ /* title , navbar */
+.header { /* header area with which includes title/ and navbar */
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
 
-    
+.main-logo-title {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar { /* navbar  */
@@ -27,7 +27,6 @@ a {   /* Remove default link styling */
 
 .navbar ul li:hover > .sub-menu { /* Dropdown menu on hover of a li */
     display: flex;
-
 } 
 
 .navlinks {  /* class added to navbar ul elements in functions.php */
@@ -50,7 +49,6 @@ a {   /* Remove default link styling */
 .sub-menu:hover { /* Layout of dropdown menu for navbar */
     display: flex;
     transition-delay:1.5s;
-    
 }
 .sub-menu li{ /* Layout of dropdown menu for navbar */
     margin: 0 0.25rem;
@@ -61,7 +59,6 @@ a {   /* Remove default link styling */
     padding-right: 0;
     border-bottom: 1px dotted #ccc;
     width: max-content;
-  
 }
 
 .sub-menu li:hover { /* Layout of dropdown menu for navbar */

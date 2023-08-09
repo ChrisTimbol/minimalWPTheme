@@ -5,7 +5,6 @@
   */
 get_header()
 ?>
-<main class="page-container">
   <section class="blog-container">
     <?php
     if (have_posts()) { /* using if statement allows us to conditionally generate container only if reason too; else no container */

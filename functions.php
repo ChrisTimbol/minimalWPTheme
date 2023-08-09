@@ -3,11 +3,14 @@
  *  enqueues style.css to wordpress 
  */
 
+ add_theme_support( 'post-thumbnails' );
+ 
 function theme_files(){
     wp_enqueue_style( 'main-style', get_theme_file_uri('/css/index.css')); 
     wp_enqueue_style( 'header-style', get_theme_file_uri('/css/header.css')); 
     wp_enqueue_style( 'footer-style', get_theme_file_uri('/css/footer.css')); 
     wp_enqueue_style( 'page-style', get_theme_file_uri('/css/page.css'));
+    wp_enqueue_style( 'portfolio-style', get_theme_file_uri('/css/portfolio.css'));
 }
 add_action('wp_enqueue_scripts', 'theme_files');
  
@@ -19,7 +22,6 @@ function register_my_menus(){ // registers menu location in WP
         );
 }
 add_action('init', 'register_my_menus'); // add to wp
-add_theme_support( 'post-thumbnails' );
 function register_project_post_type(){ // adds project post type to admnin bar
     $labels = array(
         'name'                  => _x( 'Projects', 'Post Type General Name', 'text_domain' ),
@@ -66,31 +68,6 @@ function custom_project_category_taxonomy() { /* Custom category taxonomy for pr
         'query_var' => true,
         'rewrite' => array('slug' => 'project-category'),
     );
-
-    /* register_taxonomy('$taxonomyName, $post-type, $args) */
-    /* Registers taxonomy to 'project' POST TYPE */
     register_taxonomy('project_category', 'project', $args);
 }
 add_action('init', 'custom_project_category_taxonomy');
-
-
-/*
-    - comment.php
-    - search.php
-    - 404.php
-    - sidebar
-    - footer columns
-    - google fonts
-    - ajax?
-    - font
-    - esc all safety
-   
-
-    - Create projects taxonomy in functions
-    - Create portfolio tab to create new
-    - Pull category titles organize them into a list div
-    - 
-
-*/
-?>
-
