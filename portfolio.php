@@ -15,25 +15,26 @@ get_header() ?>
     }
     ?>
     <section class="project-category-container">
-        <?php /* use to get the archive listing? */
-        $taxonomyArgs = array(
-            'taxonomy'      => 'project_category',
-            'hide_empty'    => false,
-        );
-        $terms = get_terms($taxonomyArgs);
-        if (!empty($terms) && !is_wp_error($terms)) {
-            foreach ($terms as $term) { ?>
-                <ul class="project-category-container">
-                    <li class="category-"> <!-- add wp class that adds a number to a post pulled from db? -->
+        <ul class="category-container">
+            <?php /* use to get the archive listing? */
+            $taxonomyArgs = array(
+                'taxonomy'      => 'project_category',
+                'hide_empty'    => false,
+            );
+            $terms = get_terms($taxonomyArgs);
+
+            if (!empty($terms) && !is_wp_error($terms)) {
+                foreach ($terms as $term) {
+            ?>
+                    <li class="category-term"> <!-- add wp class that adds a number to a post pulled from db? -->
                         <?php esc_html_e($term->name) ?>
                     </li>
-
-                </ul>
-        <?php }
-        } else {
-            echo 'No custom taxonomies found.';
-        }
-        ?>
+            <?php }
+            } else {
+                echo 'No custom taxonomies found.';
+            }
+            ?>
+        </ul>
     </section>
 
     <section class="project-grid-container">
@@ -50,9 +51,9 @@ get_header() ?>
                 $custom_query->the_post();
         ?>
                 <div class="thumbnail-container">
-                    <?php
-                        the_post_thumbnail('medium', ['class' => 'thumbnail-img']);
-                    ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail('medium', ['class' => 'thumbnail-img']); ?>
+                    </a>
                 </div>
         <?php
             }
@@ -65,3 +66,13 @@ get_header() ?>
 </section>
 </main>
 <?php get_footer(); ?>
+
+<script>
+    const categoryButtons = document.querySelectorAll('category-term');
+    const projects = document.querySelectorAll(".project");
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const category = button.getAttribute();
+        })
+    })
+</script>

@@ -1,21 +1,17 @@
 
-/* .portfolio-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 1366px;
-    padding: 1.25em 0 2.5em 0;
-    min-height: 80vh;
-    color: black;
-    line-height: 1.4;
-    letter-spacing: 2px;
-}
- */
 .project-category-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    width: 100%;
 } 
+
+.category-container {
+    display: flex;
+}
+
+.category-term {
+    padding: 1rem;
+}
 
 .project-grid-container {
     display: grid;

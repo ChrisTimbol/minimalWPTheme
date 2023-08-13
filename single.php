@@ -1,6 +1,6 @@
 <?php
 /*
- * The template is used for displaying  pages on your site.
+ * The template is used for displaying  a single post
  *
  */
 get_header();

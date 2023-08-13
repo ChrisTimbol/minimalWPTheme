@@ -11,7 +11,7 @@ get_header()
       while (have_posts()) {
         the_post();
     ?>
-        <article class="post">
+        <article class="post-container">
           <h2 >
             <a class="title" href="<?php the_permalink(); ?>">
               <?php the_title(); ?>
