@@ -12,6 +12,7 @@ function theme_files()
     wp_enqueue_style('footer-style', get_theme_file_uri('/css/footer.css'));
     wp_enqueue_style('page-style', get_theme_file_uri('/css/page.css'));
     wp_enqueue_style('portfolio-style', get_theme_file_uri('/css/portfolio.css'));
+    wp_enqueue_style('archive-style', get_theme_file_uri('/css/archive.css'));
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
