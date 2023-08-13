@@ -12,7 +12,7 @@ get_header()
         the_post();
     ?>
         <article class="post">
-          <h2 class="title">
+          <h2 >
             <a class="title" href="<?php the_permalink(); ?>">
               <?php the_title(); ?>
 

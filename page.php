@@ -11,13 +11,12 @@ get_header();
     while (have_posts()) {
       the_post();
   ?>
-
-      <article class="page-post">
-        <h2 class="page-title"><?php the_title(); ?></h2>
+        <h2 class="title">
+          <?php the_title(); ?>
+        </h2>
         <p>
           <?php the_content(); ?>
         </p>
-      </article>
   <?php
     } /* end of while */
   } /* end of if */

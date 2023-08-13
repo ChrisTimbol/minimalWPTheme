@@ -3,13 +3,13 @@
  *
  */
 get_header() ?>
-<section class="portfolio-container">
+<section class="page-container">
     <?php
     if (have_posts()) { /* Title of page */
         while (have_posts()) {
             the_post();
     ?>
-            <h2> <?php the_title(); ?> </h2>
+            <h2 class="title"> <?php the_title(); ?> </h2>
     <?php
         }
     }
@@ -17,8 +17,8 @@ get_header() ?>
     <section class="project-category-container">
         <?php /* use to get the archive listing? */
         $taxonomyArgs = array(
-            'taxonomy'   => 'project_category',
-            'hide_empty' => false,
+            'taxonomy'      => 'project_category',
+            'hide_empty'    => false,
         );
         $terms = get_terms($taxonomyArgs);
         if (!empty($terms) && !is_wp_error($terms)) {
@@ -49,10 +49,9 @@ get_header() ?>
             while ($custom_query->have_posts()) { /* Loops through projects in project admin menu */
                 $custom_query->the_post();
         ?>
-          <div class="thumbnail-container">
+                <div class="thumbnail-container">
                     <?php
-                    the_post_thumbnail('thumbnail');
-    
+                        the_post_thumbnail('medium', ['class' => 'thumbnail-img']);
                     ?>
                 </div>
         <?php
