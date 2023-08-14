@@ -1,4 +1,7 @@
 <?php
+
+/* -Data comes from user, do we need sanitization? 
+   -or validate to make sure its ok to comment */
 // If the current post is protected by a password and the visitor has not yet entered the password, return early without loading the comments.
 if (post_password_required()) {
     return;

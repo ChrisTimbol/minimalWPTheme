@@ -25,6 +25,11 @@ function theme_files()
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
+function custom_excerpt_more( $more ) {
+    return '... <a href="' . get_permalink() . '">Read More</a>';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
 function register_my_menus()
 { // registers menu location in WP 
     register_nav_menus(
