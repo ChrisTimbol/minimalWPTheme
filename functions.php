@@ -13,9 +13,15 @@ function theme_files()
     wp_enqueue_style('page-style', get_theme_file_uri('/css/page.css'));
     wp_enqueue_style('portfolio-style', get_theme_file_uri('/css/portfolio.css'));
     wp_enqueue_style('archive-style', get_theme_file_uri('/css/archive.css'));
+    wp_enqueue_style('search-style', get_theme_file_uri('/css/search.css'));
 
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+
+    if (is_page_template('portfolio.php')) { // Only include the script on the portfolio template page
+        wp_enqueue_script('category-filter', get_template_directory_uri() . '/js/portfolio-category-filter.js', array(), null, true);
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 

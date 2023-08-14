@@ -20,16 +20,19 @@
                 <?php bloginfo('description'); ?>
             </h2>
         </div>
-
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'header-menu',
-                'menu_class' => 'navlinks',
-                'container' => 'nav',
-                'container_class' => 'navbar',
-            )
-        );
-        ?>
+        <nav class="navbar">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'header-menu',
+                    'menu_class' => 'navlinks',
+            
+                )
+            );
+            ?>
+<!--           <span class="search-container navlinks">
+                <?php get_search_form(); ?>
+        </span>  -->
+        </nav>
     </header>
     <main class="main-container">

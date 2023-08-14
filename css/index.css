@@ -1,67 +1,59 @@
-
-body { /* Centers main-container */
+body {
     font-family: "Coustard", Georgia, serif;
-    min-height: 100vh; /* Ensure the body takes at least the viewport height */
-    margin: 0; /* Reset default margin to ensure full width */
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
 }
 
-.main-container{ 
+.main-container,
+.page-container,
+.post-container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    width: 1366px;
+    align-items: center;
+    width: 100%;
+    max-width: 1366px; /* Set a maximum width */
     padding: 1.25em 0 2.5em 0;
-    min-height: 80vh;
     color: black;
     line-height: 1.4;
     letter-spacing: 2px;
 }
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    width: 100%;
+.main-container {
+    min-height: 80vh;
 }
 
-.post-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
+.post-container {
     min-height: 30vh;
-    width: 100%;
-    padding: 1.25em 0 2.5em 0;
-    color: black;
-    letter-spacing: 2px;
 }
 
 .title {
     font-size: 2rem;
 }
 
-.title:hover {
+.title:hover,
+.continueButton:hover {
     background: #ccc;
 }
+
 .post-date-category {
     font-size: 0.8rem;
 }
+
 .post-description {
     font-size: 1.05rem;
     line-height: 1.2;
     max-width: 900px;
-    min-width: 100px; //
+    min-width: 100px;
     min-height: 4vh;
     max-height: 50vh;
 }
 
-.continueButton{
-    text-align: center; 
+.continueButton {
+    text-align: center;
     padding: 1rem 2.5rem 0.5rem 2.5rem;
     color: #444;
     font-weight: 400;
@@ -69,6 +61,9 @@ body { /* Centers main-container */
     letter-spacing: 2px;
 }
 
-.continueButton:hover {
-    background: #ccc;
+/* Responsive Design */
+@media (max-width: 1366px) {
+    .main-container {
+        padding: 1.25em 2em; /* Add horizontal padding for smaller screens */
+    }
 }

@@ -5,108 +5,76 @@
 get_header() ?>
 <section class="page-container">
     <?php
-    if (have_posts()) { /* Title of page */
-        while (have_posts()) {
-            the_post();
+    if (have_posts()) : // Start if
+        while (have_posts()) : the_post(); // Start loop
     ?>
-            <h2 class="title"> <?php the_title(); ?> </h2>
+            <h2 class="title"><?php the_title(); ?></h2>
     <?php
-        }
-    }
+        endwhile; // End loop
+    endif; // End if
     ?>
+
     <section class="project-category-container">
         <ul class="category-container">
-            <!-- Add an "All" category -->
-            <li class="category-term" data-category="all">All</li>
+            <li class="category-term" data-category="all"><?php esc_html_e('All', 'minimal-text-domain'); ?></li>
 
-            <?php /* use to get the archive listing? */
-            $taxonomyArgs = array(
-                'taxonomy'      => 'project_category',
-                'hide_empty'    => false,
-            );
-            $terms = get_terms($taxonomyArgs);
+            <?php
+            $terms = get_terms(array(
+                'taxonomy'   => 'project_category',
+                'hide_empty' => false,
+            ));
 
-            if (!empty($terms) && !is_wp_error($terms)) {
-                foreach ($terms as $term) {
+            if ($terms && !is_wp_error($terms)) :
+                foreach ($terms as $term) :
             ?>
                     <li class="category-term" data-category="<?php echo esc_attr($term->slug); ?>">
-                        <?php esc_html_e($term->name) ?>
+                        <?php echo esc_html($term->name); ?>
                     </li>
-            <?php }
-            } else {
-                echo 'No custom taxonomies found.';
-            }
+            <?php
+                endforeach;
+            else :
+                esc_html_e('No custom taxonomies found.', 'minimal-text-domain');
+            endif;
             ?>
         </ul>
     </section>
     <section class="project-grid-container">
         <?php
-        $args = array(
-            'post_type'      => 'project', // Replace with your custom post type slug
-            'posts_per_page' => 10, // Number of posts to display
-        );
+        $custom_query = new WP_Query(array(
+            'post_type'      => 'project',
+            'posts_per_page' => 10,
+        ));
 
-        $custom_query = new WP_Query($args);
+        if ($custom_query->have_posts()) :
+            while ($custom_query->have_posts()) : $custom_query->the_post();
 
-        if ($custom_query->have_posts()) {
-            while ($custom_query->have_posts()) { /* Loops through projects in project admin menu */
-                $custom_query->the_post();
-
-                $post_id = get_the_ID();
-                $categories = get_the_terms($post_id, 'project_category'); /* Get category terms for each project */
+                $categories = get_the_terms(get_the_ID(), 'project_category'); // Get category terms for each project
         ?>
-
                 <div class="thumbnail-container">
                     <a href="<?php the_permalink(); ?>" class="testd">
-
-                        <?php if ($categories && !is_wp_error($categories)) : ?> <!-- adds a span label of the category name of each Project -->
+                        <?php if ($categories && !is_wp_error($categories)) : // Adds a span label of the category name of each Project 
+                        ?>
                             <?php foreach ($categories as $category) : ?>
                                 <span class="category-label"><?php echo esc_html($category->name); ?></span>
                             <?php endforeach; ?>
                         <?php endif; ?>
 
-                        <?php the_post_thumbnail('medium', ['class' => 'thumbnail-img']); ?> <!-- Project Image -->
+                        <?php the_post_thumbnail('medium', ['class' => 'thumbnail-img']); // Project Image 
+                        ?>
                     </a>
                 </div>
-
         <?php
-            }
-            wp_reset_postdata(); // required after every custom query loop
-        } else {
-            echo 'No posts found.';
-        }
+            endwhile;
+            wp_reset_postdata(); // Required after every custom query loop
+        else :
+            esc_html_e('No posts found.', 'minimal-text-domain');
+        endif;
         ?>
     </section>
 </section>
 <?php get_footer(); ?>
 
-<script>
-    // JavaScript to handle category filtering
-    document.addEventListener('DOMContentLoaded', function() {
-        var categoryTerms = document.querySelectorAll('.category-term');
-        var thumbnailContainers = document.querySelectorAll('.thumbnail-container');
 
-        categoryTerms.forEach(function(term) {
-            term.addEventListener('click', function() {
-                var selectedCategory = this.getAttribute('data-category');
-
-                thumbnailContainers.forEach(function(container) {
-                    var isMatch = false;
-                    var categoryLabels = container.querySelectorAll('.category-label');
-
-                    categoryLabels.forEach(function(label) {
-                        if (label.textContent === selectedCategory || selectedCategory === 'all') {
-                            isMatch = true;
-                        }
-                    });
-
-                    // Show or hide based on category match
-                    container.style.display = isMatch ? 'block' : 'none';
-                });
-            });
-        });
-    });
-</script>
 
 <!--
     Checklist
