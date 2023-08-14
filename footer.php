@@ -3,11 +3,14 @@
  *  Footer
  */
 ?>
+</main><!-- End of content -->
+<footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> - All rights reserved.</p>
+            <p><a href="<?php echo esc_url(home_url('/')); ?>privacy-policy">Privacy Policy</a> | <a href="<?php echo esc_url(home_url('/')); ?>terms-and-conditions">Terms &amp; Conditions</a></p>
+        </div>
+    </footer>
 
-<footer id="colophon" class="site-footer">
-    by Chris T.
     <?php wp_footer(); ?>
-</footer>
 </body>
-
 </html>
