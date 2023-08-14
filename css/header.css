@@ -32,6 +32,7 @@ a {   /* Remove default link styling */
     border-bottom: 1px dotted rgb(204,204,204);
     margin: 0;
     padding: 0;
+    
 }
 
 .header-slogan {
@@ -56,6 +57,14 @@ a {   /* Remove default link styling */
 
 .navbar ul li:hover > .sub-menu { /* Dropdown menu on hover of a li */
     display: flex;
+    
+} 
+
+.navbar ul li a:hover { /* Dropdown menu on hover of a li */
+    border-bottom: 1px dotted rgb(51,51,51);
+    line-height: 23.04px;
+
+    
 } 
 
 .navlinks {  /* class added to navbar ul elements in functions.php */
@@ -63,7 +72,10 @@ a {   /* Remove default link styling */
     justify-content: space-around;
     align-content: center;
     width: 100%;
+
 }
+
+
 
 .sub-menu { /* Layout of dropdown menu for navbar */
     display: none;
@@ -75,6 +87,7 @@ a {   /* Remove default link styling */
     background: white;
     width: max-content;
     font-size: 0.8rem;
+
 }
 
 .sub-menu:hover { /* Layout of dropdown menu for navbar */
