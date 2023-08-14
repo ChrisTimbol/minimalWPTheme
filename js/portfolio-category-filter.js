@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             thumbnailContainers.forEach(function(container) {
                 var isMatch = false;
+
+                /* Category label in a <span> that holds category label inbetween */
                 var categoryLabels = container.querySelectorAll('.category-label');
 
                 categoryLabels.forEach(function(label) {
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Show or hide based on category match
-                container.style.display = isMatch ? 'block' : 'none';
+                container.style.display = isMatch ? 'grid' : 'none';
             });
         });
     });
