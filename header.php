@@ -2,34 +2,30 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>> <!-- can be used for adding styling to certain pages per page class -->
+<body <?php body_class(); ?>>
     <header class="header">
-      <hgroup class="title-slogan-container"> 
-        <div class="header-title-container"> 
-        <h1 class="header-title">
-            Read
-        </h1>
+        <div class="title-slogan-container">
+            <div class="header-title-container">
+                <h1 class="header-title">
+                    <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+                </h1>
+            </div>
+            <h2 class="header-slogan">
+                <?php bloginfo('description'); ?>
+            </h2>
         </div>
-        <h2 class="header-slogan">
-            . . . a minimalistic theme focused on readability.
-        </h2>
-       </hgroup> 
-        <!-- Insert Image Div here ? -->
 
-        <?php // inserts navigation in a <ul> <li> common list
+        <?php
         wp_nav_menu(
             array(
                 'theme_location' => 'header-menu',
-                'menu_class' => 'navlinks', // css class to use for the ul element
+                'menu_class' => 'navlinks',
                 'container' => 'nav',
                 'container_class' => 'navbar',
             )

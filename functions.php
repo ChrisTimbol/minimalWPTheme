@@ -13,6 +13,9 @@ function theme_files()
     wp_enqueue_style('page-style', get_theme_file_uri('/css/page.css'));
     wp_enqueue_style('portfolio-style', get_theme_file_uri('/css/portfolio.css'));
     wp_enqueue_style('archive-style', get_theme_file_uri('/css/archive.css'));
+
+    // Enqueue Google Fonts
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
@@ -26,7 +29,7 @@ function register_my_menus()
 }
 add_action('init', 'register_my_menus'); // add to wp
 function register_project_post_type()
-{ // adds project post type to admnin bar
+{ // adds project post type to admin bar
     $labels = array(
         'name'                  => _x('Projects', 'Post Type General Name', 'text_domain'),
         'singular_name'         => _x('Projects', 'Post Type Singular Name', 'text_domain'),
@@ -73,6 +76,6 @@ function custom_project_category_taxonomy()
         'query_var' => true,
         'rewrite' => array('slug' => 'project-category'),
     );
-    register_taxonomy('project_category', 'project', $args);
+    register_taxonomy('project_category', 'project', $args); /* (taxonomy name, associatedWithPostType, $args) */
 }
 add_action('init', 'custom_project_category_taxonomy');

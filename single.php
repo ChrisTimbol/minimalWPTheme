@@ -27,6 +27,4 @@ get_header();
     } /* end of if */
     ?>
   </section>
-</main><!-- End of content -->
 <?php get_footer(); ?>
-</div><!-- End of page-wrapper from header.php  -->
