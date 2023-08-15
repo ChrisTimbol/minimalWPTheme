@@ -1,4 +1,3 @@
-// JavaScript to handle category filtering
 document.addEventListener('DOMContentLoaded', function() {
     var categoryTerms = document.querySelectorAll('.category-term');
     var thumbnailContainers = document.querySelectorAll('.thumbnail-container');
@@ -8,19 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
             var selectedCategory = this.getAttribute('data-category');
 
             thumbnailContainers.forEach(function(container) {
-                var isMatch = false;
+                if (selectedCategory === 'all') {
+                    container.style.display = 'block';
+                    return;
+                }
 
-                /* Category label in a <span> that holds category label inbetween */
+                var isMatch = false;
                 var categoryLabels = container.querySelectorAll('.category-label');
 
                 categoryLabels.forEach(function(label) {
-                    if (label.textContent === selectedCategory || selectedCategory === 'all') {
+                    if (label.textContent === selectedCategory) {
                         isMatch = true;
                     }
                 });
 
                 // Show or hide based on category match
-                container.style.display = isMatch ? 'grid' : 'none';
+                container.style.display = isMatch ? 'block' : 'none';
             });
         });
     });
