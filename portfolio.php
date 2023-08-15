@@ -29,8 +29,8 @@ get_header() ?>
             if ($terms && !is_wp_error($terms)) :
                 foreach ($terms as $term) :
             ?>
-                <li class="category-term" data-category="<?php echo esc_attr($term->name); ?>">
-                    <?php echo esc_html($term->name); ?>
+                <li class="category-term" data-category="<?php echo esc_attr($term->slug); ?>">
+                    <?php echo esc_html($term->slug); ?>
                 </li>
             <?php
                 endforeach;
@@ -62,7 +62,6 @@ get_header() ?>
                                 <span class="category-label"><?php echo esc_html($category->slug); ?></span>
                             <?php endforeach; ?>
                         <?php endif; ?>
-                        <!--                                             -->
 
                         <?php the_post_thumbnail('medium', ['class' => 'thumbnail-img']); // Project Image 
                         ?>
