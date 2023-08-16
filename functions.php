@@ -15,7 +15,7 @@ function theme_files()
     wp_enqueue_style('archive-style', get_theme_file_uri('/css/archive.css'));
     wp_enqueue_style('search-style', get_theme_file_uri('/css/search.css'));
     wp_enqueue_style('comments-style', get_theme_file_uri('/css/comments.css'));
-
+    wp_enqueue_style('single-style', get_theme_file_uri('/css/single.css'));
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 

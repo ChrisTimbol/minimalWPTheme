@@ -2,7 +2,7 @@ ul, ol { /* Remove default list styling */
     list-style: none;
 }
 
-a {   /* Remove default link styling */
+a { /* Remove default link styling */
     color: inherit;
     text-decoration: none;
 }
@@ -11,8 +11,8 @@ a {   /* Remove default link styling */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1366px;
-    padding: 5rem;
+    max-width: 1366px;
+    padding: 2rem;
 }
 
 .main-container {
@@ -25,24 +25,18 @@ a {   /* Remove default link styling */
     letter-spacing: 2px;
 }
 
-.title-slogan-container {
-
-}
-
 .header-title-container {
-    color rgb(68, 68, 68);
+    color: rgb(68, 68, 68);
     display: flex;
     justify-content: center;
     font-family: UnifrakturMaguntia, Georgia, serif;
     font-size: 4rem;
-
 }
 
 .header-title {
     border-bottom: 1px dotted rgb(204,204,204);
     margin: 0;
     padding: 0;
-    
 }
 
 .header-slogan {
@@ -54,18 +48,19 @@ a {   /* Remove default link styling */
     font-family: Coustard, Georgia, serif;
     font-size: 12.8px;
 }
-.navbar { /* navbar  */
+.navbar {
+    display: flex; /* Use flexbox for the navbar */
+    justify-content: space-between; /* Space between the menu and search bar */
+    align-items: center; /* Center alignment vertically */
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
     box-shadow: inset 0 0 12px rgba(0,0,0,5%);
     line-height: 2rem;
     color: #333;
     font-family: Coustard, Georgia, serif;
+    
 }
 
-.search-container{
-    display: flex;
-}
 .navbar ul li:hover > .sub-menu { /* Dropdown menu on hover of a li */
     display: flex;
     border-bottom: 1px solid #f0f0f0;
@@ -77,15 +72,41 @@ a {   /* Remove default link styling */
  
 } 
 
-.navlinks {  /* class added to navbar ul elements in functions.php */
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    width: 100%;
-
+.navlinks {
+    display: flex; /* Display flex to align the menu items */
+    flex: 1; /* Flex 1 to take up available space */
+    justify-content: space-around; /* Distribute space around the items */
 }
 
+.navlinks > li {
+    flex-grow: 1; /* Distribute available space equally between menu items */
+    text-align: center; /* Center the text within each menu item */
+}
 
+.search-container {
+    display: flex; /* Flexbox for search container */
+    align-items: center;
+}
+
+.search-container form {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.search-container input[type="search"] {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    font-family: Coustard, Georgia, serif;
+    font-size: 1rem;
+}
+
+.search-container input[type="submit"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Coustard, Georgia, serif;
+    font-size: 1rem;
+}
 
 .sub-menu { /* Layout of dropdown menu for navbar */
     display: none;
@@ -122,4 +143,3 @@ a {   /* Remove default link styling */
 .sub-menu li a{ /* Layout of dropdown menu for navbar */
     color: inherit;
 }
-

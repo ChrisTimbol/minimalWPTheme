@@ -16,11 +16,18 @@ body {
     min-height: 80vh;
     width: 100%;
     max-width: 1366px; /* Set a maximum width */
-.date-category a:hover {
-    text-decoration: underline;
-}
+
+
+
 }
 
+.date-category a{
+
+}
+
+.date-category a:hover {
+    background: #ccc;
+}
 .post-container {
     display: flex;
     flex-direction: column;
@@ -47,10 +54,7 @@ body {
     font-size: 0.8rem;
     width: fit-content; /* This will make the date-category only as wide as its content */
 }
-.date-category a:hover {
-    text-decoration: underline;
-}
-.title:hover,
+
 .continueButton:hover {
     background: #ccc;
 }

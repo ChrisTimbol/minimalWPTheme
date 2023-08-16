@@ -1,14 +1,17 @@
 <?php
-
-/* -Data comes from user, do we need sanitization? 
-   -or validate to make sure its ok to comment */
-// If the current post is protected by a password and the visitor has not yet entered the password, return early without loading the comments.
+/*
+ * The template for displaying Comments.
+ *
+ * The area of the page that contains comments and the comment form.
+ *
+ */
 if (post_password_required()) {
     return;
 }
 ?>
 
 <section id="comments" class="comments-container"> <!-- Wrapper for comments -->
+
     <?php if (have_comments()) : ?>
         <h2 class="comments-title-container">
             <?php $comments_number = get_comments_number(); ?>
@@ -38,5 +41,11 @@ if (post_password_required()) {
         <?php endif; ?>
 
     <?php endif; ?>
-    <?php comment_form(); ?>
+    <?php
+    $args = array(
+        'class_submit' => 'submit-button', // Adding a custom class to the submit button
+        'label_submit' => __('Post Comment', 'minimal-text-domain'), // Label for the submit button
+    );
+    comment_form($args);
+?>
 </section>

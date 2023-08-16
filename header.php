@@ -26,13 +26,13 @@
                 array(
                     'theme_location' => 'header-menu',
                     'menu_class' => 'navlinks',
-            
+                    'container' => 'false', /* Removes <div> wrap around <ul> */
                 )
             );
             ?>
-<!--           <span class="search-container navlinks">
+            <li class="search-container">
                 <?php get_search_form(); ?>
-        </span>  -->
+            </li>
         </nav>
     </header>
     <main class="main-container">

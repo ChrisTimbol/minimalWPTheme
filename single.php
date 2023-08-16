@@ -5,34 +5,33 @@
  */
 get_header();
 ?>
-<main class="e-main">
-  <section class="post-container">
-    <?php
-    if (have_posts()) {
-      while (have_posts()) {
-        the_post(); // Sets up the global post data. More on this below.
-    ?>
-        <article class="page-post">
-            This is using single.php
-          <h2 class="page-title"><?php the_title(); ?></h2>
-          <div class="page-details">
-            posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?>
-          </div>
-          <p>
-            <?php the_content(); ?>
-          </p>
-        </article>
-    <?php
-      } /* end of while */
-    } /* end of if */
-    ?>
+<section class="single-container">
+  <?php
+  if (have_posts()) :
+    while (have_posts()) :
+      the_post(); // Sets up the global post data. More on this below.
+  ?>
+      <article class="single-article-container">
+        This is using single.php
+        <h2 class="page-title"><?php the_title(); ?></h2>
+        <p class="date-category">
+          posted in <?php echo get_the_category_list(', '); ?> on
+          <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
+            <?php the_time('F j, Y'); ?>
+          </a>
+          by <?php the_author_posts_link(); ?>
+        <p>
+          <?php the_content(); ?>
+        </p>
+      </article>
+    <?php endwhile; ?>
+  <?php endif; ?>
 
-    <?php
-    // Include the comments template
-    if ( comments_open() || get_comments_number() ) {
-        comments_template();
-    }
-    ?>
-  </section>
-</main>
+  <?php
+  // Include the comments template
+  if (comments_open() || get_comments_number()) {
+    comments_template();
+  }
+  ?>
+</section>
 <?php get_footer(); ?>

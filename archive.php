@@ -12,11 +12,11 @@ get_header();
       } elseif (is_author()) {
           echo 'Posts by ' . get_the_author();
       } elseif (is_day()) {
-          echo 'Archive for ' . get_the_date();
+          echo 'Archive for <a href="' . esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))) . '">' . get_the_date() . '</a>';
       } elseif (is_month()) {
-          echo 'Archive for ' . get_the_date('F Y');
+          echo 'Archive for <a href="' . esc_url(get_month_link(get_the_time('Y'), get_the_time('m'))) . '">' . get_the_date('F Y') . '</a>';
       } elseif (is_year()) {
-          echo 'Archive for ' . get_the_date('Y');
+          echo 'Archive for <a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . get_the_date('Y') . '</a>';
       } else {
           echo 'Archives';
       }
