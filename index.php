@@ -19,13 +19,13 @@ get_header();
             </a>
           </h2>
           <p class="date-category">
-            Posted in <?php echo get_the_category_list(', '); ?> on
+            posted in <?php echo get_the_category_list(', '); ?> on
             <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
               <?php the_time('F j, Y'); ?>
             </a>
             by <?php the_author_posts_link(); ?>
             <a href="<?php echo esc_url(get_comments_link()); ?>">
-              <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?>
+              <?php comments_number('0 comments', '1 comment', '% comments'); ?>
             </a>
           </p>
         </header>

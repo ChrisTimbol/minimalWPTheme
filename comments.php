@@ -8,29 +8,12 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<section id="comments" class="comments-container"> <!-- Wrapper for comments -->
     <?php if (have_comments()) : ?>
-        <h2 class="comments-title">
-            <?php
-            $comments_number = get_comments_number();
-            if ('1' === $comments_number) {
-                /* translators: %s: post title */
-                printf(_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'minimal-text-domain'), get_the_title());
-            } else {
-                printf(
-                    /* translators: 1: number of comments, 2: post title */
-                    _nx(
-                        '%1$s thought on &ldquo;%2$s&rdquo;',
-                        '%1$s thoughts on &ldquo;%2$s&rdquo;',
-                        $comments_number,
-                        'comments title',
-                        'minimal-text-domain'
-                    ),
-                    number_format_i18n($comments_number),
-                    get_the_title()
-                );
-            }
-            ?>
+        <h2 class="comments-title-container">
+            <?php $comments_number = get_comments_number(); ?>
+            <?php echo $comments_number; ?> Comments →
+            <span class="comments-title"><?php the_title(); ?></span>
         </h2>
 
         <ol class="comment-list">
@@ -39,7 +22,7 @@ if (post_password_required()) {
                 array(
                     'style'      => 'ol',
                     'short_ping' => true,
-                    'avatar_size'=> 50,
+                    'avatar_size' => 50,
                 )
             );
             ?>
@@ -54,7 +37,6 @@ if (post_password_required()) {
             <p class="no-comments"><?php _e('Comments are closed.', 'minimal-text-domain'); ?></p>
         <?php endif; ?>
 
-    <?php endif; // Check for have_comments(). ?>
-
+    <?php endif; ?>
     <?php comment_form(); ?>
-</div><!-- #comments -->
+</section>
