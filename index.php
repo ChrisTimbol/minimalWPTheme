@@ -12,6 +12,7 @@ get_header();
       the_post();
   ?>
       <section class="post-container">
+        
         <header class="post-header">
           <h2>
             <a class="title" href="<?php echo esc_url(get_permalink()); ?>">

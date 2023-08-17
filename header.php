@@ -31,7 +31,7 @@
             );
             ?>
             <li class="search-container">
-                <?php get_search_form(); ?>
+                <?php get_sidebar('header'); ?>
             </li>
         </nav>
     </header>

@@ -58,6 +58,7 @@ a { /* Remove default link styling */
     line-height: 2rem;
     color: #333;
     font-family: Coustard, Georgia, serif;
+    min-width: 100%;
     
 }
 

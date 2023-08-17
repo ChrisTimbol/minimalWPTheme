@@ -26,10 +26,33 @@ function theme_files()
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
-function custom_excerpt_more( $more ) {
+function my_custom_widgets_init()
+{
+    /*     register_sidebar(
+        array(
+            'name' => __('SearchBar', 'minimal-text-domain'),
+        )
+    ) */
+    register_sidebar(
+        array(
+            'name'          => 'Header Search Area',
+            'id'            => 'header-search',
+            'description'   => 'sidebar next to main content',
+            'before-widget' => 'div class="widget-content">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+add_action( 'widgets_init', 'my_custom_widgets_init' );
+
+
+function custom_excerpt_more($more)
+{
     return '... <a href="' . get_permalink() . '">Continue Reading...</a>';
 }
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+add_filter('excerpt_more', 'custom_excerpt_more');
 
 function register_my_menus()
 { // registers menu location in WP 
@@ -42,14 +65,15 @@ function register_my_menus()
 add_action('init', 'register_my_menus'); // add to wp
 
 
-function add_search_box_to_menu( $items, $args ) {
-    if ( $args->theme_location == 'primary' ) { // You can replace 'primary' with your custom menu's slug
-        $search_form = get_search_form( false ); // This fetches the default WordPress search form
+function add_search_box_to_menu($items, $args)
+{
+    if ($args->theme_location == 'primary') { // You can replace 'primary' with your custom menu's slug
+        $search_form = get_search_form(false); // This fetches the default WordPress search form
         $items .= '<li class="menu-item-search">' . $search_form . '</li>';
     }
     return $items;
 }
-add_filter( 'wp_nav_menu_items', 'add_search_box_to_menu', 10, 2 );
+add_filter('wp_nav_menu_items', 'add_search_box_to_menu', 10, 2);
 
 function register_project_post_type()
 { // adds project post type to admin bar
@@ -59,7 +83,7 @@ function register_project_post_type()
     );
 
     $args = array(
-        'label' => __('Projects', 'text domain'),
+        'label' => __('Projects', 'minimal-text-domain'),
         'labels'                => $labels,
         'description' => __('a place for project items'),
         'public' => true,
@@ -68,7 +92,7 @@ function register_project_post_type()
         'show_in_menu'          => true,
         'menu_position'         => 4,
         'supports' => array('title', 'editor', 'thumbnail'),
-
+        
     );
 
     register_post_type('project', $args);
