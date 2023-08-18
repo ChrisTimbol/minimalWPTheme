@@ -20,6 +20,7 @@
                 <?php bloginfo('description'); ?>
             </h2>
         </div>
+        <!-- Start of nav -->
         <nav class="navbar">
             <?php
             wp_nav_menu(
@@ -30,9 +31,9 @@
                 )
             );
             ?>
-            <li class="search-container">
-                <?php get_sidebar('header'); ?>
-            </li>
+          
+                <?php get_sidebar('header'); ?>  <!-- get sidebar-header.php -->
+        
         </nav>
     </header>
     <main class="main-container">

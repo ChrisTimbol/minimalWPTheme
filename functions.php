@@ -16,6 +16,8 @@ function theme_files()
     wp_enqueue_style('search-style', get_theme_file_uri('/css/search.css'));
     wp_enqueue_style('comments-style', get_theme_file_uri('/css/comments.css'));
     wp_enqueue_style('single-style', get_theme_file_uri('/css/single.css'));
+    wp_enqueue_style('searchform-style', get_theme_file_uri('/css/searchform.css'));
+   
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
@@ -28,24 +30,25 @@ add_action('wp_enqueue_scripts', 'theme_files');
 
 function my_custom_widgets_init()
 {
-    /*     register_sidebar(
-        array(
-            'name' => __('SearchBar', 'minimal-text-domain'),
-        )
-    ) */
     register_sidebar(
         array(
             'name'          => 'Header Search Area',
-            'id'            => 'header-search',
+            'id'            => 'header-search-sidebar',
             'description'   => 'sidebar next to main content',
-            'before-widget' => 'div class="widget-content">',
-            'after_widget'  => '</div>',
+/*             'before-widget' => 'div class="widget-content">',
+            'after_widget'  => '</div>', */
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
         )
     );
 }
 add_action( 'widgets_init', 'my_custom_widgets_init' );
+
+
+function enqueue_custom_search_script() { /* Search Bar Animation */
+    wp_enqueue_script('custom-search', get_template_directory_uri() . '/js/searchbar-animation.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_search_script');
 
 
 function custom_excerpt_more($more)

@@ -1,6 +1,8 @@
+<!-- Area/sidebar for main sidemenu -->
+
 <aside id="secondary" class="widget-area">
     <?php if ( is_active_sidebar( 'custom-sidebar' ) ) : ?>
-        <?php dynamic_sidebar( 'custom-sidebar' ); ?>
+
     <?php else : ?>
         <!-- You can add some default content here if the sidebar is empty -->
         <section class="widget">

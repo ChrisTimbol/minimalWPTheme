@@ -1,5 +1,6 @@
-ul, ol { /* Remove default list styling */
+ul, ol , li{ /* Remove default list styling */
     list-style: none;
+    
 }
 
 a { /* Remove default link styling */
@@ -58,7 +59,7 @@ a { /* Remove default link styling */
     line-height: 2rem;
     color: #333;
     font-family: Coustard, Georgia, serif;
-    min-width: 100%;
+    width: 1366px;
     
 }
 
@@ -81,33 +82,10 @@ a { /* Remove default link styling */
 
 .navlinks > li {
     flex-grow: 1; /* Distribute available space equally between menu items */
-    text-align: center; /* Center the text within each menu item */
+   /*  text-align: center; */ /* Center the text within each menu item */
 }
 
-.search-container {
-    display: flex; /* Flexbox for search container */
-    align-items: center;
-}
 
-.search-container form {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-
-.search-container input[type="search"] {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    font-family: Coustard, Georgia, serif;
-    font-size: 1rem;
-}
-
-.search-container input[type="submit"] {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: Coustard, Georgia, serif;
-    font-size: 1rem;
-}
 
 .sub-menu { /* Layout of dropdown menu for navbar */
     display: none;
