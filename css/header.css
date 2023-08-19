@@ -1,13 +1,9 @@
-ul, ol , li{ /* Remove default list styling */
-    list-style: none;
-    
-}
-
-a { /* Remove default link styling */
+ul, li, a {
     color: inherit;
+    list-style: none;
     text-decoration: none;
+   
 }
-
 .header { /* header area with which includes title/ and navbar */
     display: flex;
     flex-direction: column;

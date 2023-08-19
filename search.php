@@ -24,7 +24,7 @@ get_header();
                         <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?>
                     </a>
                 </p>
-                <p><?php the_excerpt(); ?></p>
+                <p><?php the_excerpt(); ?></p> <!-- excerpt -->
                 <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
             </article>
         <?php endwhile; ?>

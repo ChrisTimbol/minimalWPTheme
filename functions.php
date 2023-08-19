@@ -3,10 +3,10 @@
  *  functions for theme
  */
 
-add_theme_support('post-thumbnails');
+add_theme_support('post-thumbnails'); /* Allow post-thumbnails , main usage is for portfolio images */
 
-function theme_files()
-{
+function theme_files() { /* this function is use to enqueue Styling, fonts, and .js scripts into wordpress */
+    // css files 
     wp_enqueue_style('main-style', get_theme_file_uri('/css/index.css'));
     wp_enqueue_style('header-style', get_theme_file_uri('/css/header.css'));
     wp_enqueue_style('footer-style', get_theme_file_uri('/css/footer.css'));
@@ -21,44 +21,34 @@ function theme_files()
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
+    // Custom Search Script
+    wp_enqueue_script('custom-search', get_template_directory_uri() . '/js/searchbar-animation.js', array(), null, true);
 
-    if (is_page_template('portfolio.php')) { // Only include the script on the portfolio template page
+    // Only include the script on the portfolio template page
+    if (is_page_template('portfolio.php')) { 
         wp_enqueue_script('category-filter', get_template_directory_uri() . '/js/portfolio-category-filter.js', array(), null, true);
     }
 }
-add_action('wp_enqueue_scripts', 'theme_files');
+add_action('wp_enqueue_scripts', 'theme_files'); 
 
-function my_custom_widgets_init()
-{
+function my_custom_widgets_init() {
     register_sidebar(
         array(
             'name'          => 'Header Search Area',
             'id'            => 'header-search-sidebar',
             'description'   => 'sidebar next to main content',
-/*             'before-widget' => 'div class="widget-content">',
-            'after_widget'  => '</div>', */
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
         )
     );
 }
 add_action( 'widgets_init', 'my_custom_widgets_init' );
-
-
-function enqueue_custom_search_script() { /* Search Bar Animation */
-    wp_enqueue_script('custom-search', get_template_directory_uri() . '/js/searchbar-animation.js', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_custom_search_script');
-
-
-function custom_excerpt_more($more)
-{
-    return '... <a href="' . get_permalink() . '">Continue Reading...</a>';
+function custom_excerpt_more($more){
+    return '... <a class="archive-permalink" href="' . get_permalink() . '">Continue Reading...</a>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
-
 function register_my_menus()
-{ // registers menu location in WP 
+{ 
     register_nav_menus(
         array(
             'primary' => __('Primary Menu'), // creates a header-menu var location to refer to in wp

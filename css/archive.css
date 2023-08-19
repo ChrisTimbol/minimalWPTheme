@@ -5,3 +5,7 @@
 .archive-title {
     
 }
+
+.archive-permalink { /* The excerpt ... at the end of 55 words, located in  archive search results */
+    text-decoration: underline;
+}
