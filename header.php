@@ -19,6 +19,7 @@
             <?php bloginfo('description'); ?>
         </h2>
 
+        <!-- Generates navmenu with sidebar for search container -->
         <nav class="site-navigation">
             <?php
             wp_nav_menu(
@@ -29,7 +30,7 @@
                 )
             );
             ?>
-            <div class="search-container">
+            <div class="site-sidebar-container"> 
                 <?php get_sidebar('header') ?>
             </div>
         </nav>

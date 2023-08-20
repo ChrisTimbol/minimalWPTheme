@@ -1,7 +1,5 @@
 body {
     font-family: "Coustard", Georgia, serif;
-    min-height: 100vh;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,13 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     width: 100%;
-    max-width: 1366px; /* Set a maximum width */
-}
-
-.date-category a{
-
+    max-width: 1366px; 
 }
 
 .date-category a:hover {

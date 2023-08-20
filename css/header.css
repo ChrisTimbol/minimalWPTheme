@@ -35,17 +35,25 @@ h1 {
     box-shadow: inset 0 0 12px rgba(0, 0, 0, 5%); 
     font-family: Coustard, Georgia, serif;
     width: 100%;
-    line-height: 3rem;
     color: #333;
+
 }
 .site-nav-list-with-sidebar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 0; 
-    margin: 0; 
+    padding: 1rem 0;
+    margin: 0;
     flex: 0 0 85%;
+}
+.site-sidebar-container {
+    flex: 0 0 15%;
+    padding: 1rem 0;
+}
+
+.site-nav-list-with-sidebar li:hover {
+    border-bottom: 1px solid gray;
 }
 
 .site-nav-list-no-sidebar {
@@ -56,15 +64,6 @@ h1 {
     padding: 0; 
     margin: 0; 
     flex: 0 0 100%;
-}
-
-
-
-.search-container {
-    flex: 0 0 15%;
-/*     display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .navbar ul li:hover > .sub-menu { /* Dropdown menu on hover of a li */
