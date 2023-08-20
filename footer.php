@@ -4,7 +4,7 @@
  */
 ?>
 </main><!-- End of content -->
-
+</div>
 <footer class="site-footer">
     <div class="footer-container">
         <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> - All rights reserved.</p>

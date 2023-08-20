@@ -1,40 +1,38 @@
-.project-category-container {
+.portfolio-container {
+
+}
+.portfolio-title {
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin-bottom: 1rem; /* Add some space below the container */
+    font-size: 2rem;
 }
-
 .category-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap; /* Allow wrapping if many categories */
 }
-
 .category-term {
     padding: 1rem;
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
-
 .category-term:hover {
     background-color: #f0f0f0; /* Add a subtle hover effect */
 }
-
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     background-color: #fff;
-    width: 100%;
+    //width: 100%;
+    padding: 1rem;
     grid-gap: 16px; /* Increase gap for better visual separation */
 }
-
 .thumbnail-container {
     position: relative;
     width: 100%;
     padding-bottom: 100%;
     background-color: #f0f0f0; /* Background color while image is loading */
 }
-
 .thumbnail-img {
     position: absolute;
     top: 0;

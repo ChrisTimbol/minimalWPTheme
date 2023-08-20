@@ -85,6 +85,15 @@ function my_custom_sidebars_init() { /* Use to create sidebar for header, needs 
             'after_title'   => '</h3>',
         )
     );
+    register_sidebar(
+        array(
+            'name'          => 'Main blog sidebar area',
+            'id'            => 'Main-blog-sidebar',
+            'description'   => 'area next to navbar links',
+            'before_title'  => '<h3 class="widget-title">', /*  */
+            'after_title'   => '</h3>',
+        )
+    );
 }
 add_action( 'widgets_init', 'my_custom_sidebars_init' );
 function register_my_menus() { /* Register nav menu for user to edit */

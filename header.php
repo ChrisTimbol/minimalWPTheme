@@ -30,9 +30,13 @@
                 )
             );
             ?>
-            <div class="site-sidebar-container"> 
-                <?php get_sidebar('header') ?>
+            <div class="site-sidebar-container">
+                <?php get_sidebar('header'); ?>
             </div>
         </nav>
     </header>
-    <main class="main-container">
+    <div class="main-wrapper">
+        <aside class="main-sidebar">
+            <?php get_sidebar(); ?>
+        </aside>
+        <main class="main-container">
