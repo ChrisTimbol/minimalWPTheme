@@ -1,67 +1,75 @@
-ul, li, a {
+ul, li, a { /* Remove color and underline  */
     color: inherit;
     list-style: none;
-    text-decoration: none;
-   
+    text-decoration: none;  
 }
-.header { /* header area with which includes title/ and navbar */
+h1 {
+    font-size: 4.4rem;
+}
+.site-header { /* header area with which includes title/ and navbar */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 1366px;
-    padding: 2rem;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: column;
+    justify-content: center; 
     align-items: center;
-    width: 100%;
-    max-width: 1366px; /* Set a maximum width */
-    line-height: 1.4;
-    letter-spacing: 2px;
+    padding: 3rem;
+    width: 1366px;
 }
-
-.header-title-container {
-    color: rgb(68, 68, 68);
-    display: flex;
-    justify-content: center;
+.site-title { /* title spacing */
     font-family: UnifrakturMaguntia, Georgia, serif;
-    font-size: 4rem;
-}
-
-.header-title {
     border-bottom: 1px dotted rgb(204,204,204);
-    margin: 0;
-    padding: 0;
+    margin: 1rem;
 }
-
-.header-slogan {
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.site-title a {  /* title color/font*/
+    color: rgb(68, 68, 68); 
+    text-decoration: none;
+}
+.site-description { /* The description below title */
     color: rgb(68, 68, 68);
-    font-family: Coustard, Georgia, serif;
-    font-size: 12.8px;
+    font-size: 0.8rem;
 }
-.navbar {
-    display: flex; /* Use flexbox for the navbar */
-    justify-content: space-between; /* Space between the menu and search bar */
-    align-items: center; /* Center alignment vertically */
+.site-navigation {
+    display: flex;
+    align-items: center; 
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
-    box-shadow: inset 0 0 12px rgba(0,0,0,5%);
-    line-height: 2rem;
-    color: #333;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 5%); 
     font-family: Coustard, Georgia, serif;
-    width: 1366px;
-    
+    width: 100%;
+    line-height: 3rem;
+    color: #333;
+}
+.site-nav-list-with-sidebar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+    flex: 0 0 85%;
+}
+
+.site-nav-list-no-sidebar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+    flex: 0 0 100%;
+}
+
+
+
+.search-container {
+    flex: 0 0 15%;
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 .navbar ul li:hover > .sub-menu { /* Dropdown menu on hover of a li */
-    display: flex;
-    border-bottom: 1px solid #f0f0f0;
+/*     display: flex;
+    border-bottom: 1px solid #f0f0f0; */
 } 
 
 .navbar ul li a:hover { /* Dropdown menu on hover of a li */
@@ -69,20 +77,6 @@ ul, li, a {
     box-shadow: inset 0 0 12px rgba(0,0,0,5%); */
  
 } 
-
-.navlinks {
-    display: flex; /* Display flex to align the menu items */
-    flex: 1; /* Flex 1 to take up available space */
-    justify-content: space-around; /* Distribute space around the items */
-}
-
-.navlinks > li {
-    flex-grow: 1; /* Distribute available space equally between menu items */
-   /*  text-align: center; */ /* Center the text within each menu item */
-}
-
-
-
 .sub-menu { /* Layout of dropdown menu for navbar */
     display: none;
     position: absolute;
@@ -93,9 +87,7 @@ ul, li, a {
     background: white;
     width: max-content;
     font-size: 0.8rem;
-
 }
-
 .sub-menu:hover { /* Layout of dropdown menu for navbar */
     display: flex;
     transition-delay:1.5s;
@@ -117,4 +109,19 @@ ul, li, a {
   
 .sub-menu li a{ /* Layout of dropdown menu for navbar */
     color: inherit;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1366px; /* Sets a maximum width of page */
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px; /* 1rem = 14px on small screens */
+    }
 }

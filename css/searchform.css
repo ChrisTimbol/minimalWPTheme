@@ -1,37 +1,26 @@
-.search-container {
-    position: relative;
-    display: inline-block;
-}
-
-.search-text,
 .search-form {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.search-text {
-    z-index: 2;
-    cursor: pointer;
-}
-
-.search-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    pointer-events: none;
+    line-height: 3rem;
 }
 
 .search-field {
-    width: 150px;
-    padding: 5px;
+    border: 0;
+    font-size: 1rem;
+    font-family: Coustard, Georgia, serif;
 }
 
-.search-container:hover .search-form {
-    opacity: 1;
-    pointer-events: auto;
+
+.search-field::placeholder {
+    opacity: 0.9; 
+    border: 0;
+    color: #333;
 }
 
-.search-container:hover .search-text {
-    display: block;
+
+ .search-field:hover {
+    opacity: 0.6;
 }
+ 

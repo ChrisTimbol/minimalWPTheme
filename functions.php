@@ -2,6 +2,7 @@
 /* 
  *  Adds functionality to WP theme
  */
+
 add_theme_support('post-thumbnails'); /* Allow post-thumbnails , main usage is for portfolio images */
 function theme_files() { /* this function is use to enqueue Styling, fonts, and .js scripts into wordpress */
     // css files 
@@ -19,7 +20,7 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
-    // Custom Search Script
+    // Custom Search Script animation
     wp_enqueue_script('custom-search', get_template_directory_uri() . '/js/searchbar-animation.js', array(), null, true);
 
     // Only include the script on the portfolio template page
@@ -33,7 +34,6 @@ function register_project_post_type() { // adds project post type to admin bar
         'name'                  => _x('Projects', 'Post Type General Name', 'text_domain'),
         'singular_name'         => _x('Projects', 'Post Type Singular Name', 'text_domain'),
     );
-
     $args = array(
         'label' => __('Projects', 'minimal-text-domain'),
         'labels'                => $labels,
@@ -46,7 +46,6 @@ function register_project_post_type() { // adds project post type to admin bar
         'supports' => array('title', 'editor', 'thumbnail'),
         
     );
-
     register_post_type('project', $args);
 }
 add_action('init', 'register_project_post_type');
@@ -79,9 +78,9 @@ add_action('init', 'custom_project_category_taxonomy');
 function my_custom_sidebars_init() { /* Use to create sidebar for header, needs work */
     register_sidebar(
         array(
-            'name'          => 'Header Search Area',
-            'id'            => 'header-search-sidebar',
-            'description'   => 'sidebar next to main content',
+            'name'          => 'Header sidebar/widget area',
+            'id'            => 'header-sidebar',
+            'description'   => 'area next to navbar links',
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
         )
@@ -100,4 +99,3 @@ function wpdocs_custom_excerpt_length( $length ) { /* Excerpt length */
 	return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-?>

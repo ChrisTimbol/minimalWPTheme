@@ -1,11 +1,11 @@
 /* Search bar animation */
 
-document.querySelector('.search-text').addEventListener('click', function() {
+/* document.querySelector('.search-text').addEventListener('click', function() {
     document.querySelector('.search-form').classList.toggle('active');
 });
 
 
-
+ */
 
 /* 
 Go into searchform.php Create a  li 
