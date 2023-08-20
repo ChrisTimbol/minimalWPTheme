@@ -1,10 +1,8 @@
 <?php
 /* 
- *  functions for theme
+ *  Adds functionality to WP theme
  */
-
 add_theme_support('post-thumbnails'); /* Allow post-thumbnails , main usage is for portfolio images */
-
 function theme_files() { /* this function is use to enqueue Styling, fonts, and .js scripts into wordpress */
     // css files 
     wp_enqueue_style('main-style', get_theme_file_uri('/css/index.css'));
@@ -90,10 +88,6 @@ function my_custom_sidebars_init() { /* Use to create sidebar for header, needs 
     );
 }
 add_action( 'widgets_init', 'my_custom_sidebars_init' );
-function wpdocs_custom_excerpt_length( $length ) { /* Excerpt length */
-	return 20;
-}
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 function register_my_menus() { /* Register nav menu for user to edit */
     register_nav_menus(
         array(
@@ -101,4 +95,9 @@ function register_my_menus() { /* Register nav menu for user to edit */
         )
     );
 }
-add_action('init', 'register_my_menus'); // add to wp
+add_action('init', 'register_my_menus'); 
+function wpdocs_custom_excerpt_length( $length ) { /* Excerpt length */
+	return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+?>
