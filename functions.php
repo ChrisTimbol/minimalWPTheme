@@ -30,46 +30,7 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
     }
 }
 add_action('wp_enqueue_scripts', 'theme_files'); 
-
-function my_custom_widgets_init() {
-    register_sidebar(
-        array(
-            'name'          => 'Header Search Area',
-            'id'            => 'header-search-sidebar',
-            'description'   => 'sidebar next to main content',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
-        )
-    );
-}
-add_action( 'widgets_init', 'my_custom_widgets_init' );
-function custom_excerpt_more($more){
-    return '... <a class="archive-permalink" href="' . get_permalink() . '">Continue Reading...</a>';
-}
-add_filter('excerpt_more', 'custom_excerpt_more');
-function register_my_menus()
-{ 
-    register_nav_menus(
-        array(
-            'primary' => __('Primary Menu'), // creates a header-menu var location to refer to in wp
-        )
-    );
-}
-add_action('init', 'register_my_menus'); // add to wp
-
-
-function add_search_box_to_menu($items, $args)
-{
-    if ($args->theme_location == 'primary') { // You can replace 'primary' with your custom menu's slug
-        $search_form = get_search_form(false); // This fetches the default WordPress search form
-        $items .= '<li class="menu-item-search">' . $search_form . '</li>';
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'add_search_box_to_menu', 10, 2);
-
-function register_project_post_type()
-{ // adds project post type to admin bar
+function register_project_post_type() { // adds project post type to admin bar
     $labels = array(
         'name'                  => _x('Projects', 'Post Type General Name', 'text_domain'),
         'singular_name'         => _x('Projects', 'Post Type Singular Name', 'text_domain'),
@@ -91,9 +52,7 @@ function register_project_post_type()
     register_post_type('project', $args);
 }
 add_action('init', 'register_project_post_type');
-
-function custom_project_category_taxonomy()
-{ /* Custom category taxonomy for projects */
+function custom_project_category_taxonomy() { /* Custom category taxonomy for projects */
     $labels = array(
         'name' => 'Project Categories',
         'singular_name' => 'Project Category',
@@ -119,3 +78,27 @@ function custom_project_category_taxonomy()
     register_taxonomy('project_category', 'project', $args); /* (taxonomy name, associatedWithPostType, $args) */
 }
 add_action('init', 'custom_project_category_taxonomy');
+function my_custom_sidebars_init() { /* Use to create sidebar for header, needs work */
+    register_sidebar(
+        array(
+            'name'          => 'Header Search Area',
+            'id'            => 'header-search-sidebar',
+            'description'   => 'sidebar next to main content',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+add_action( 'widgets_init', 'my_custom_sidebars_init' );
+function wpdocs_custom_excerpt_length( $length ) { /* Excerpt length */
+	return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+function register_my_menus() { /* Register nav menu for user to edit */
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu'), // creates a header-menu var location to refer to in wp
+        )
+    );
+}
+add_action('init', 'register_my_menus'); // add to wp
