@@ -1,9 +1,12 @@
-
+.blog-layout-2-container {
+    display: flex;
+    min-height: 80vh;
+}
 .main-sidebar{ /* makes sidebar on right */
     order: 2;
     width: 20%;
 }
-.blog-layout-2-container {
+.blog-container-2 {
+    order: 1;
     width: 80%;
-    
 }
