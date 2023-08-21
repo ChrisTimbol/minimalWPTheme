@@ -12,7 +12,7 @@ get_header();
         <p>Please add widgets to the sidebar.</p>
     <?php endif; ?>
 </aside>
-<main class="blog-container">
+<main class="blog-layout-2-container">
     <?php
     if (have_posts()) :
         while (have_posts()) :

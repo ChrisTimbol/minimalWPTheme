@@ -2,12 +2,15 @@
 h1 {
     font-size: 4.4rem;
 }
+.site-container { /* Located at bottom of header.php */
+    width: 1366px;  
+}   
 .site-header { /* header area with which includes title/ and navbar */
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    width: 1366px;
+    max-width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -19,7 +22,6 @@ h1 {
 .site-title a {  /* title color/font*/
     color: rgb(68, 68, 68); 
     text-decoration: none;
-    
 }
 .site-description { /* The description below title */
     color: rgb(68, 68, 68);
@@ -44,6 +46,7 @@ h1 {
     margin: 0;
 }
 .site-nav-list li {
+    
     text-decoration: none; 
     list-style: none;
     color: inherit;

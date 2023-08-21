@@ -2,7 +2,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
 body {
     font-family: "Coustard", Georgia, serif;
     display: flex;
@@ -13,14 +12,11 @@ body {
     box-sizing: border-box;
     line-height: 1.4;
 }
-.main-wrapper { /* Located at bottom of header.php */
-    display: flex;
-    justify-content: center;
-    width: 1366px;  
-}   
-
 .blog-container {
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .date-category a:hover {
     background: #f0f0f0;

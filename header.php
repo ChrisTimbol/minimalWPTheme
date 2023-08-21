@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div class="site-container">
     <header class="site-header">
         <h1 class="site-title">
             <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
@@ -29,4 +30,3 @@
             ?>
         </nav>
     </header>
-    <div class="main-wrapper">
