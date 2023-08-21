@@ -31,8 +31,6 @@ get_header();
             <?php
             wp_list_pages(array(
                 'title_li' => '',
-                'link_before' => '<span class="archive-column-item">',
-                'link_after'  => '</span>',
             ));
             ?>
         </ul>

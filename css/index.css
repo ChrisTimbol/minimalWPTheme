@@ -1,9 +1,14 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
 body {
     font-family: "Coustard", Georgia, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+        line-height: 1.4;
 }
 .main-wrapper { /* Located at bottom of header.php */
     display: flex;

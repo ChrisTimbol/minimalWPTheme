@@ -3,12 +3,16 @@
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    height: 75vh;
+    min-height: 75vh;
 }
 
 .archive-column {
 
 }
 
-.archive-column-item {
+.archive-column-item:hover  {
+    background: #ccc;
+}
+li:empty {/* Hide empty bullets (specifically for post archives) */
+    display: none;
 }
