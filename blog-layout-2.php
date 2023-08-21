@@ -6,8 +6,8 @@ get_header();
 ?>
 
 <aside class="main-sidebar">
-    <?php if (is_active_sidebar('main-blog-sidebar')) : ?>
-        <?php dynamic_sidebar('main-blog-sidebar'); ?>
+    <?php if (is_active_sidebar('blog-sidebar')) : ?>
+        <?php dynamic_sidebar('blog-sidebar'); ?>
     <?php else : ?>
         <p>Please add widgets to the sidebar.</p>
     <?php endif; ?>

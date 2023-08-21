@@ -74,22 +74,14 @@ function custom_project_category_taxonomy() { /* Custom category taxonomy for pr
 }
 add_action('init', 'custom_project_category_taxonomy');
 function my_custom_sidebars_init() { /* Use to create sidebar for header, needs work */
-/*     register_sidebar(
-        array(
-            'name'          => 'Header sidebar/widget area',
-            'id'            => 'header-sidebar',
-            'description'   => 'area next to navbar links',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
-        )
-    ); 
-*/
     register_sidebar(
         array(
-            'name'          => 'Main blog sidebar/widget area',
-            'id'            => 'main-blog-sidebar',
+            'name'          => 'Blog sidebar/widget area',
+            'id'            => 'blog-sidebar',
             'description'   => 'area next to navbar links',
-            'before_title'  => '<h3 class="widget-title">', /*  */
+            'before_widget' => '<section class="widget">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title">', 
             'after_title'   => '</h3>',
         )
     );
@@ -107,3 +99,9 @@ function wpdocs_custom_excerpt_length( $length ) { /* Excerpt length */
 	return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+function my_footer_menu() { /* Menu for footer layout */
+    register_nav_menu('footer-menu', __( 'Footer Menu' ));
+}
+add_action('init', 'my_footer_menu');
