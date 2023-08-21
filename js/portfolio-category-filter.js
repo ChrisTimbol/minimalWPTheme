@@ -1,3 +1,4 @@
+/* Portfolio category script */
 document.addEventListener('DOMContentLoaded', function() {
     var categoryTerms = document.querySelectorAll('.category-term');
     var thumbnailContainers = document.querySelectorAll('.thumbnail-container');

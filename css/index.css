@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-        line-height: 1.4;
+    line-height: 1.4;
 }
 .main-wrapper { /* Located at bottom of header.php */
     display: flex;
@@ -20,7 +20,7 @@ body {
     min-height: 80vh;
 }
 .date-category a:hover {
-    background: #ccc;
+    background: #f0f0f0;
 }
 .post-container {
     display: flex;
@@ -47,9 +47,8 @@ body {
 }
 
 .continueButton:hover {
-    background: #ccc;
+    background: #f0f0f0;
 }
-
 .post-description {
     font-size: 1.05rem;
     line-height: 1.2;
@@ -58,7 +57,6 @@ body {
     min-height: 4vh;
     max-height: 50vh;
 }
-
 .continueButton {
     text-align: center;
     padding: 1rem 2.5rem 0.5rem 2.5rem;

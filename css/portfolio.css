@@ -13,6 +13,7 @@
 }
 .category-term {
     padding: 1rem;
+    list-style: none;
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
