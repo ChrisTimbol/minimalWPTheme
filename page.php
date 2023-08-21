@@ -8,7 +8,7 @@ get_header();
 if (have_posts()) :
     while (have_posts()) : the_post();
 ?>
-        <div class="page-container">
+        <section class="page-container">
             <header class="page-header">
                 <h2 class="page-title">
                     <?php the_title(); ?>
@@ -23,6 +23,5 @@ else :
     echo '<p>No page found.</p>';
 endif;
     ?>
-    </section>
-        </div>
+        </section>
         <?php get_footer(); ?>
