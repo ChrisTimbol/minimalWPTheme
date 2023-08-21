@@ -1,4 +1,7 @@
 <?php
+/* 
+    Default page layout for new pages created
+*/
 get_header();
 ?>
 <?php
