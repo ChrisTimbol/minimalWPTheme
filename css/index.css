@@ -10,6 +10,10 @@ body {
     justify-content: center;
     width: 1366px;  
 }   
+
+.blog-container {
+    min-height: 80vh;
+}
 .date-category a:hover {
     background: #ccc;
 }
@@ -20,16 +24,14 @@ body {
     line-height: 1.4;
     letter-spacing: 2px;
 }
-.post-header,
-.archive-header {
+.post-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.title,
-.archive-title {
+.title {
     font-size: 2rem;
     width: fit-content; /* This will make the title only as wide as its content */
 }

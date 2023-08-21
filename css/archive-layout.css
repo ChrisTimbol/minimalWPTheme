@@ -1,0 +1,14 @@
+.archive-layout-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 75vh;
+}
+
+.archive-column {
+
+}
+
+.archive-column-item {
+}

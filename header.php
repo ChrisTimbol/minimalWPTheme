@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<!--  -->
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -18,8 +17,6 @@
         <h2 class="site-description">
             <?php bloginfo('description'); ?>
         </h2>
-
-        <!-- Generates navmenu with sidebar for search container -->
         <nav class="site-navigation">
             <?php
             wp_nav_menu(
@@ -30,9 +27,6 @@
                 )
             );
             ?>
-<!--             <div class="searchbar-container">
-      
-            </div> -->
         </nav>
     </header>
     <div class="main-wrapper">

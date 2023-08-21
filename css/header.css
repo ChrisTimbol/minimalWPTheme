@@ -1,8 +1,4 @@
-ul, li, a { /* Remove color and underline  */
-    color: inherit;
-    list-style: none;
-    text-decoration: none;  
-}
+
 h1 {
     font-size: 4.4rem;
 }
@@ -48,6 +44,21 @@ h1 {
     padding: 0.5rem;
 }
 
+.site-nav-list {
+    text-decoration: none; 
+    list-style: none;
+    color: inherit;
+}
+.site-nav-list li {
+    text-decoration: none; 
+    list-style: none;
+    color: inherit;
+}
+.site-nav-list li a{
+    text-decoration: none; 
+    list-style: none;
+    color: inherit;
+}
 /* .site-nav-list-with-sidebar {
     display: flex;
     justify-content: space-around;
@@ -62,7 +73,7 @@ h1 {
 }
  */
  .site-nav-list li:hover {
-    border-bottom: 1px dotted  rgb(68, 68, 68);
+    text-decoration: rgb(68,68,68) underline dotted;
 } 
 
 .site-nav-list-no-sidebar {
