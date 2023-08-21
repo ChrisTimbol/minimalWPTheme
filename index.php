@@ -11,8 +11,7 @@ get_header();
     while (have_posts()) :
       the_post();
   ?>
-      <section class="post-container">
-        
+      <article class="post-container">
         <header class="post-header">
           <h2>
             <a class="title" href="<?php echo esc_url(get_permalink()); ?>">
@@ -34,7 +33,7 @@ get_header();
           <?php the_excerpt(); ?>
         </div>
         <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
-      </section>
+      </article>
   <?php
     endwhile;
   endif;

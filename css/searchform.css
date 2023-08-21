@@ -5,22 +5,17 @@
     z-index: 1;
     line-height: 3rem;
 }
-
 .search-field {
     border: 0;
     font-size: 1rem;
     font-family: Coustard, Georgia, serif;
 }
-
-
 .search-field::placeholder {
     opacity: 0.9; 
     border: 0;
     color: #333;
 }
-
-
- .search-field:hover {
-    opacity: 0.6;
+.search-field:hover {
+    opacity: 0.3;
 }
  

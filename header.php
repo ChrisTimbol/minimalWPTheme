@@ -25,18 +25,14 @@
             wp_nav_menu(
                 array(
                     'theme_location' => 'header-menu',
-                    'menu_class' => 'site-nav-list-with-sidebar',
+                    'menu_class' => 'site-nav-list',
                     'container' => false,
                 )
             );
             ?>
-            <div class="site-sidebar-container">
-                <?php get_sidebar('header'); ?>
-            </div>
+<!--             <div class="searchbar-container">
+      
+            </div> -->
         </nav>
     </header>
     <div class="main-wrapper">
-        <aside class="main-sidebar">
-            <?php get_sidebar(); ?>
-        </aside>
-        <main class="main-container">

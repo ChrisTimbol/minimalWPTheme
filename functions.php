@@ -16,7 +16,9 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
     wp_enqueue_style('comments-style', get_theme_file_uri('/css/comments.css'));
     wp_enqueue_style('single-style', get_theme_file_uri('/css/single.css'));
     wp_enqueue_style('searchform-style', get_theme_file_uri('/css/searchform.css'));
-   
+    wp_enqueue_style('blog-layout-1-style', get_theme_file_uri('/css/blog-layout-1.css'));
+    wp_enqueue_style('blog-layout-2-style', get_theme_file_uri('/css/blog-layout-2.css'));
+
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
@@ -76,7 +78,7 @@ function custom_project_category_taxonomy() { /* Custom category taxonomy for pr
 }
 add_action('init', 'custom_project_category_taxonomy');
 function my_custom_sidebars_init() { /* Use to create sidebar for header, needs work */
-    register_sidebar(
+/*     register_sidebar(
         array(
             'name'          => 'Header sidebar/widget area',
             'id'            => 'header-sidebar',
@@ -84,11 +86,12 @@ function my_custom_sidebars_init() { /* Use to create sidebar for header, needs 
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
         )
-    );
+    ); 
+*/
     register_sidebar(
         array(
-            'name'          => 'Main blog sidebar area',
-            'id'            => 'Main-blog-sidebar',
+            'name'          => 'Main blog sidebar/widget area',
+            'id'            => 'main-blog-sidebar',
             'description'   => 'area next to navbar links',
             'before_title'  => '<h3 class="widget-title">', /*  */
             'after_title'   => '</h3>',

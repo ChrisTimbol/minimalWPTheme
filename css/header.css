@@ -27,7 +27,7 @@ h1 {
     color: rgb(68, 68, 68);
     font-size: 0.8rem;
 }
-.site-navigation {
+.site-navigation { 
     display: flex;
     align-items: center; 
     border-top: 1px solid #f0f0f0;
@@ -38,7 +38,17 @@ h1 {
     color: #333;
 
 }
-.site-nav-list-with-sidebar {
+
+.site-nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* .site-nav-list-with-sidebar {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -46,15 +56,14 @@ h1 {
     margin: 0;
     padding: 0.5rem;
     flex: 0 0 85%;
-}
-.site-sidebar-container {
+} */
+/* .searchbar-container {
     width: 20%;
-    padding: 0.5rem;
 }
-
-.site-nav-list-with-sidebar li:hover {
+ */
+ .site-nav-list li:hover {
     border-bottom: 1px dotted  rgb(68, 68, 68);
-}
+} 
 
 .site-nav-list-no-sidebar {
     display: flex;
@@ -107,23 +116,7 @@ h1 {
 .sub-menu li a{ /* Layout of dropdown menu for navbar */
     color: inherit;
 }
-.main-wrapper {
-    display: flex;
-    width: 1366px;
-  
-}
-.main-container {
-    width: 80%; 
-    line-height: 1.4;
-    letter-spacing: 2px;
 
-}
-.main-sidebar {
-    width: 20%;
-    order: 2;
-    padding: 0rem; 
-
-}
 
 @media (max-width: 600px) {
     html {

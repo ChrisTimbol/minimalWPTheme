@@ -1,0 +1,9 @@
+
+.main-sidebar{ /* makes sidebar on right */
+    order: 2;
+    width: 20%;
+}
+.blog-container {
+    width: 80%;
+    
+}

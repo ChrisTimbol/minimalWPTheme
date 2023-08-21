@@ -1,11 +1,11 @@
 <?php
 get_header();
 ?>
-<section class="page-container">
     <?php
     if (have_posts()) :
         while (have_posts()) : the_post();
     ?>
+<div class="page-container">
         <header class="page-header">
             <h2 class="page-title">
                 <?php the_title(); ?>
@@ -21,4 +21,5 @@ get_header();
     endif;
     ?>
 </section>
+</div>
 <?php get_footer(); ?>

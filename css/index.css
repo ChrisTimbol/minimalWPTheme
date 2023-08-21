@@ -4,10 +4,12 @@ body {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    
 }
-
-
+.main-wrapper { /* Located at bottom of header.php */
+    display: flex;
+    justify-content: center;
+    width: 1366px;  
+}   
 .date-category a:hover {
     background: #ccc;
 }
@@ -18,7 +20,6 @@ body {
     line-height: 1.4;
     letter-spacing: 2px;
 }
-
 .post-header,
 .archive-header {
     display: flex;
