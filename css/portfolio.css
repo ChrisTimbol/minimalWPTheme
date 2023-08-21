@@ -41,12 +41,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-.thumbnail-container:first-child {
-/*     grid-column: span 2;
-    grid-row: span 2; */
-}
-
 /* Responsive Design for Larger Screens */
 @media (min-width: 768px) {
     .project-grid-container {
