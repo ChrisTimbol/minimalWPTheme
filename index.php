@@ -34,9 +34,19 @@ get_header();
         </div>
         <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
       </article>
-  <?php
-    endwhile;
-  endif;
+
+    <?php
+    endwhile; ?> 
+    <div class="pagination">
+      <?php
+      the_posts_pagination(array(
+        'mid_size'  => 2,
+        'prev_text' => __('« Previous', 'text-domain'),
+        'next_text' => __('Next »', 'text-domain'),
+      ));
+      ?>
+    </div>
+  <?php endif;
   ?>
 </section>
 <?php get_footer(); ?>
