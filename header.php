@@ -19,7 +19,7 @@
                 <?php bloginfo('description'); ?>
             </h2>
             <nav class="site-navigation">
-            <div class="hamburger-menu">
+                <div class="hamburger-menu">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -33,7 +33,5 @@
                     )
                 );
                 ?>
-
-
             </nav>
         </header>

@@ -2,6 +2,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+h2 {
+    font-size: 2rem;
+}
 body {
     font-family: "Coustard", Georgia, serif;
     display: flex; 
@@ -18,44 +21,31 @@ body {
 }
 .date-category a:hover {
     background: #f0f0f0;
-   
 }
 .post-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 2px;
+    margin: 0.5rem;
 }
 .post-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
-
-.title {
-   
-    width: fit-content; /* This will make the title only as wide as its content */
-    margin-bottom: 0;
+.post-title {
 }
-
 .date-category {
     font-size: 0.8rem;
     margin: 0;
-    width: fit-content; /* This will make the date-category only as wide as its content */
+    padding: 0;
 }
-
 .continueButton:hover {
     background: #f0f0f0;
 }
 .post-description {
-    font-size: 1.05rem;
-    line-height: 1.2;
-    max-width: 900px;
-    min-width: 100px;
-    min-height: 4vh;
-    max-height: 50vh;
 }
 .continueButton {
     text-align: center;
@@ -66,11 +56,5 @@ body {
     letter-spacing: 2px;
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
-    /* Adjust styles for tablet view here */
-}
-
-/* Desktop styles */
-@media (min-width: 1025px) {
-    /* Adjust styles for desktop view here */
+@media (min-width: 600px) and(max-width: 1024px) {
 }
