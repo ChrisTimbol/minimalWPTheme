@@ -10,23 +10,30 @@
 </head>
 
 <body>
-<div class="site-container">
-    <header class="site-header">
-        <h1 class="site-title">
-            <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-        </h1>
-        <h2 class="site-description">
-            <?php bloginfo('description'); ?>
-        </h2>
-        <nav class="site-navigation">
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'header-menu',
-                    'menu_class' => 'site-nav-list',
-                    'container' => false,
-                )
-            );
-            ?>
-        </nav>
-    </header>
+    <div class="site-container">
+        <header class="site-header">
+            <h1 class="site-title">
+                <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+            </h1>
+            <h2 class="site-description">
+                <?php bloginfo('description'); ?>
+            </h2>
+            <nav class="site-navigation">
+            <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'header-menu',
+                        'menu_class' => 'site-nav-list',
+                        'container' => false,
+                    )
+                );
+                ?>
+
+
+            </nav>
+        </header>

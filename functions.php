@@ -25,6 +25,10 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
     if (is_page_template('portfolio.php')) { 
         wp_enqueue_script('category-filter', get_template_directory_uri() . '/js/portfolio-category-filter.js', array(), null, true);
     }
+
+    /* Enqueue hamburger js click */
+    wp_enqueue_script('hamburger-script', get_template_directory_uri() . '/js/hamburger.js', array('jquery'), '1.0.0', true);
+
 }
 add_action('wp_enqueue_scripts', 'theme_files'); 
 function register_project_post_type() { // adds project post type to admin bar
