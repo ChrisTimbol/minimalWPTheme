@@ -2,6 +2,11 @@
 h1 {
     font-size: 4.4rem;
 }
+.site-container {  /* Limit page size for white space to focus on content for reader */
+    width: 1366px;  
+
+} 
+ 
 .site-header { /* header area with which includes title/ and navbar */
     display: flex;
     flex-direction: column;
@@ -109,9 +114,6 @@ h1 {
 }
 /* Desktop styles */
 @media (min-width: 1025px) {
-    .site-container { /* Located at bottom of header.php */
-        width: 1366px;  
-    }   
     .hamburger-menu {
         display: none;
     }

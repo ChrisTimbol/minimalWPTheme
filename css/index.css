@@ -6,6 +6,7 @@ h2 {
     font-size: 2rem;
 }
 body {
+    /* width: 1366px; */
     font-family: "Coustard", Georgia, serif;
     display: flex; 
     flex-direction: column;

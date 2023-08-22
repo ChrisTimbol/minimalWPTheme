@@ -4,7 +4,6 @@
  */
 ?>
 </main><!-- End of content -->
-</div>
 <footer class="site-footer">
 
 
@@ -14,13 +13,13 @@
                 'theme_location' => 'footer-menu',
                 'container' => false,
                 'depth' => 1,
-                'menu_class' => 'footer-menu', // Add this line
+                'menu_class' => 'footer-menu', 
             ));
         }
         ?>
  
 </footer>
 <?php wp_footer(); ?>
+</div>  <!-- End of site-container /div -->
 </body>
-    </div>
 </html>
