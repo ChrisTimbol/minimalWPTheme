@@ -1,28 +1,26 @@
 .site-footer {
-    width: 1366px;
-
-    height: 240px;
-    border: 1px solid red
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
 }
-
-
 .footer-menu {
-    border: 1px solid red;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
-    max-height: 100%;
-    max-width: 100%;
+    height: 75%;
 }
-
 .footer-menu li {
+    padding: 0.25rem;
     list-style: none;
 }
-
 .footer-menu li:hover {
     text-decoration: underline;
     background-color: #ccc;
