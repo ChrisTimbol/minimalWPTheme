@@ -2,25 +2,30 @@
     min-height: 100vh;
     max-width: 100%;
 }
+
 .portfolio-title {
     display: flex;
     justify-content: center;
     font-size: 2rem;
 }
+
 .category-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping if many categories */
+    flex-wrap: wrap;
 }
+
 .category-term {
     padding: 1rem;
     list-style: none;
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .category-term:hover {
-    background-color: #f0f0f0; /* Add a subtle hover effect */
+    background-color: #f0f0f0;
 }
+
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
@@ -28,39 +33,19 @@
     padding: 0 1rem;
     grid-gap: 1rem; 
 }
+
 .thumbnail-container {
     position: relative;
     padding-bottom: 75%; 
-    background-color: #f0f0f0; 
-    overflow: hidden; /* Hide the overflow content */
-    transition: transform 0.3s ease; /* Add a smooth zooming transition effect */
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .thumbnail-container:hover .thumbnail-img {
-    transform: scale(1.1); /* Zoom the image a bit on hover */
+    transform: scale(1.1);
 }
 
-.category-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the label */
-    opacity: 0; /* Make it invisible initially */
-    transition: opacity 0.3s ease; /* Add a smooth fade-in transition effect */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    color: #ffffff; /* White text color */
-    padding: 0.5rem 1rem; /* Add some padding around the label */
-    border-radius: 4px; /* Rounded corners for the label */
-    z-index: 2;
-}
-
-.thumbnail-container:hover .category-label {
-    opacity: 1; /* Make it fully visible on hover */
-}
-
-.thumbnail-container:hover  .project-description {
-    opacity: 1; /* Make it fully visible on hover */
-}
 .thumbnail-img {
     position: absolute;
     top: 0;
@@ -70,19 +55,36 @@
     object-fit: cover;
 }
 
-.project-description  {
+.category-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.thumbnail-container:hover .category-label,
+.thumbnail-container:hover .project-description {
+    opacity: 1;
+}
+
+.project-description {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the label */
-    opacity: 0; /* Make it invisible initially */
-    transition: opacity 0.3s ease; /* Add a smooth fade-in transition effect */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    color: #ffffff; /* White text color */
- 
-    border-radius: 4px; /* Rounded corners for the label */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border-radius: 4px;
     z-index: 2;
- 
 }
 
 .project-description p {
@@ -90,34 +92,9 @@
     margin: 0;
 }
 
-/* Small Devices (Phones, Landscape mode) */
-@media (max-width: 768px) {
-    .project-grid-container {
-  /*       grid-template-columns: 1fr; */
-    }
-}
-
-/* Medium Devices (Tablets) */
+/* Media Queries */
 @media (min-width: 769px) and (max-width: 992px) {
     .project-grid-container {
         grid-template-columns: 1fr 1fr;
-
-    }
-     
-}
-
-/* Large Devices (Desktops) */
-@media (min-width: 993px) and (max-width: 1200px) {
-    /* styles for large devices */
-    .project-grid-container {
-   /*      grid-template-columns: fit-content(1fr); */
-    }
-
-}
-
-/* Extra Large Devices (Large Desktops) */
-@media (min-width: 1201px) {
-    .project-grid-container {
-        
     }
 }

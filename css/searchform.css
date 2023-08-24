@@ -2,20 +2,18 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    z-index: 1;
     line-height: 3rem;
+    z-index: 1;
 }
 .search-field {
     border: 0;
     font-size: 1rem;
     font-family: Coustard, Georgia, serif;
 }
-.search-field::placeholder {
-    opacity: 0.9; 
-    border: 0;
-    color: #333;
-}
 .search-field:hover {
     opacity: 0.3;
 }
- 
+.search-field::placeholder {
+    color: #333;
+    opacity: 0.9;
+}

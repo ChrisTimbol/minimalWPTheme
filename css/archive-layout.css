@@ -2,24 +2,24 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    align-items: flex-start; /* This will align the tops of the columns */
+    align-items: flex-start;
     min-height: 75vh;
 }
 
 .archive-column {
-    padding: 20px; /* Add some padding around each column for spacing */
+    padding: 20px; 
 }
 
 .archive-column h2 {
-    margin-bottom: 20px; /* Add consistent space below each title */
-    border-bottom: 2px solid #333; /* Optional: Add a border below each title for visual separation */
-    padding-bottom: 10px; /* Space between title text and border */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333; 
+    padding-bottom: 10px;
 }
 
 .archive-column-item:hover  {
     background: #ccc;
 }
 
-li:empty { /* Hide empty bullets (specifically for post archives) */
+li:empty { 
     display: none;
 }

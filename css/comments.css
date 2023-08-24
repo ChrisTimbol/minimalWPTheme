@@ -1,6 +1,5 @@
 .comments-container {
     border-top: 1px solid rgb(170, 170, 170);
-    
 }
 
 .comments-title{
@@ -13,9 +12,7 @@
 .submit-button {
     text-align: center;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-
     font-weight: 400;
-/*     border-bottom: 1px dotted #ccc; */
     letter-spacing: 2px;
 }
 

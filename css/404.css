@@ -4,12 +4,10 @@
   align-items: center;
   min-height: 75vh;
 }
-
 .backHome {
     color: inherit;
     text-decoration: underline; 
 }
-
 .backHome:hover {
     color: blue;
 }

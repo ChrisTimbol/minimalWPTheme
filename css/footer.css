@@ -7,7 +7,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  
 }
 .footer-menu {
     display: flex;
@@ -16,7 +15,6 @@
     align-items: center;
     flex-wrap: wrap;
     width: 900px;
-
 }
 .footer-menu li {
     list-style: none;
