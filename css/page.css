@@ -2,19 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-/* 
-    width: 1366px; */
     letter-spacing: 2px;
     min-height: 75vh;
+    border: 1px solid red;
+    max-width: 100%;
+    padding: 1rem;
 }
 .page-header {
-    width: 100%;
+/*     width: 100%; */
     display: flex;
     justify-content: center;
+    max-width: 100%;
 }
 .page-title {
     font-size: 2rem;
 }
 .page-content {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%; /* ensure the content takes the full width of the container */
+    overflow-wrap: break-word; /* this will break long words or URLs */
+    
+    /* if you have images or other media */
+    img, iframe, video {
+        width: 100%;
+        max-width: 100%;
+        height: auto; /* maintain aspect ratio for images and videos */
+    }
 }

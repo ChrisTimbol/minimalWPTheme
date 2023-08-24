@@ -44,7 +44,7 @@ body {
     justify-content: center;
 }
 .post-title {
-
+    
 }
 
 .continueButton:hover {
@@ -53,8 +53,6 @@ body {
 }
 .post-description {
 }
-
-/* Pagination styles */
 .pagination {
     display: flex;
     justify-content: center;
@@ -68,18 +66,14 @@ body {
     color: #333;
     transition: background-color 0.3s;
 }
-
 .page-numbers:hover {
     background-color: #f5f5f5;
 }
-
-/* Highlight the current page number */
 .page-numbers.current {
-    background-color: #0073aa; /* Example color, adjust as needed */
+    background-color: #0073aa; 
     color: #fff;
     border-color: #0073aa;
 }
-
 .continueButton {
     text-align: center;
     padding: 1rem 2.5rem 0.5rem 2.5rem;
@@ -88,6 +82,5 @@ body {
     border-bottom: 1px dotted #ccc;
     letter-spacing: 2px;
 }
-
 @media (min-width: 600px) and(max-width: 1024px) {
 }
