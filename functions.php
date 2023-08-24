@@ -110,3 +110,17 @@ function my_footer_menu() { /* Menu for footer layout */
     register_nav_menu('footer-menu', __( 'Footer Menu' ));
 }
 add_action('init', 'my_footer_menu');
+
+
+function custom_excerpt_length( $length ) { 
+    if ( get_post_type() == 'project' ) {
+        return 9; // Change 20 to the number of words you want for the 'project' post type
+    }
+    return $length; // Return default length for other post types
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function custom_excerpt_ellipsis( $more ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_ellipsis' );
