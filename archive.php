@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<section class="blog-container">
+<section class="archive-container">
     <header class="archive-header">
         <h2 class="archive-title">
             <?php

@@ -1,5 +1,6 @@
 .portfolio-container {
-    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
 }
 .portfolio-title {
     display: flex;
@@ -22,16 +23,14 @@
 }
 .project-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
     background-color: #fff;
-    width: 100%;
-    padding: 1rem;
-    grid-gap: 16px; /* Increase gap for better visual separation */
+    padding: 0 1rem;
+    grid-gap: 1rem; 
 }
 .thumbnail-container {
     position: relative;
-    width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
     background-color: #f0f0f0; /* Background color while image is loading */
 }
 .thumbnail-img {
@@ -42,9 +41,34 @@
     height: 100%;
     object-fit: cover;
 }
-/* Responsive Design for Larger Screens */
-@media (min-width: 768px) {
+/* Small Devices (Phones, Landscape mode) */
+@media (max-width: 768px) {
     .project-grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /*       grid-template-columns: 1fr; */
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .project-grid-container {
+        grid-template-columns: 1fr 1fr;
+
+    }
+     
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* styles for large devices */
+    .project-grid-container {
+   /*      grid-template-columns: fit-content(1fr); */
+    }
+
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1201px) {
+    .project-grid-container {
+        
     }
 }

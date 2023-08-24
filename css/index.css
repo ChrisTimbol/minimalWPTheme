@@ -20,6 +20,12 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+.date-category {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2rem;
+}
 .date-category a:hover {
     background: #f0f0f0;
 }
@@ -35,14 +41,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .post-title {
+
 }
-.date-category {
-    font-size: 0.8rem;
-    margin: 0;
-    padding: 0;
-}
+
 .continueButton:hover {
     background: #f0f0f0;
     transition: background-color 0.3s;
