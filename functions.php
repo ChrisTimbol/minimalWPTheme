@@ -97,7 +97,7 @@ add_action( 'widgets_init', 'my_custom_sidebars_init' );
 function register_my_menus() { /* Register a menu locationfor user to edit */
     register_nav_menus(
         array(
-            'primary' => __('Primary Menu', 'Minimalistic'), // creates a header-menu var location to refer to in wp
+            'primary' => __('Header Menu', 'Minimalistic'),  
         )
     );
 }

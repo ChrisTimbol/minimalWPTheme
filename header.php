@@ -28,7 +28,7 @@
                 <?php
                 wp_nav_menu(
                     array(
-                        'theme_location' => 'header-menu',
+                        'theme_location' => 'primary', 
                         'container' => false,
                         'menu_class' => 'site-nav-list',
              
