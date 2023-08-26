@@ -34,13 +34,13 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
 add_action('wp_enqueue_scripts', 'theme_files'); 
 function register_project_post_type() { // adds project post type to admin bar
     $labels = array(
-        'name'                  => _x('Projects', 'Post Type General Name', 'text_domain'),
-        'singular_name'         => _x('Projects', 'Post Type Singular Name', 'text_domain'),
+        'name'                  => _x('Projects', 'Post Type General Name', 'text-domain'),
+        'singular_name'         => _x('Projects', 'Post Type Singular Name', 'text-domain'),
     );
     $args = array(
-        'label' => __('Projects', 'minimal-text-domain'),
+        'label' => __('Projects', 'text-domain'),
         'labels'                => $labels,
-        'description' => __('a place for project items'),
+        'description' => __('a place for project items', 'text-domain'),
         'public' => true,
         'hierarchical' => false,
         'show_ui'               => true,
@@ -92,10 +92,10 @@ function my_custom_sidebars_init() { /* Use to create sidebar for header, needs 
     );
 }
 add_action( 'widgets_init', 'my_custom_sidebars_init' );
-function register_my_menus() { /* Register nav menu for user to edit */
+function register_my_menus() { /* Register a menu locationfor user to edit */
     register_nav_menus(
         array(
-            'primary' => __('Primary Menu'), // creates a header-menu var location to refer to in wp
+            'primary' => __('Primary Menu', 'text-domain'), // creates a header-menu var location to refer to in wp
         )
     );
 }
@@ -107,7 +107,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 function my_footer_menu() { /* Menu for footer layout */
-    register_nav_menu('footer-menu', __( 'Footer Menu' ));
+    register_nav_menu('footer-menu', __( 'Footer Menu', 'text-domain'));
 }
 add_action('init', 'my_footer_menu');
 

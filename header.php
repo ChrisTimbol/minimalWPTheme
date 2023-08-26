@@ -28,8 +28,9 @@
                 wp_nav_menu(
                     array(
                         'theme_location' => 'header-menu',
-                        'menu_class' => 'site-nav-list',
                         'container' => false,
+                        'menu_class' => 'site-nav-list',
+             
                     )
                 );
                 ?>
