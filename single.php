@@ -11,7 +11,7 @@ get_header();
     while (have_posts()) :
       the_post(); // Sets up the global post data. More on this below.
   ?>
-      <article class="single-article-container">
+      <article class="single-article-container" <?php post_class(); ?>>
         This is using single.php
         <h2 class="page-title"><?php the_title(); ?></h2>
         <p class="date-category">
@@ -26,8 +26,15 @@ get_header();
       </article>
     <?php endwhile; ?>
   <?php endif; ?>
+  <?php     // Display page links for paginated posts
+  wp_link_pages(array(
+    'before' => '<div class="page-links">' . esc_html__('Pages:', 'Minimalistic'),
+    'after'  => '</div>',
+  ));
 
+  ?>
   <?php
+
   // Include the comments template
   if (comments_open() || get_comments_number()) {
     comments_template();

@@ -30,7 +30,7 @@ get_header();
     if (have_posts()) :
         while (have_posts()) : the_post();
     ?>
-            <section class="post-container">
+            <section class="post-container" <?php post_class(); ?>>
                 <header class="post-header">
                     <h2>
                         <a class="title" href="<?php esc_url(the_permalink()); ?>">

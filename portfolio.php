@@ -14,7 +14,7 @@ get_header() ?>
     endif;
     ?>
     <ul class="category-container">
-        <li class="category-term" data-category="all"><?php esc_html_e(' all ', 'text-domain'); ?></li>
+        <li class="category-term" data-category="all"><?php esc_html_e(' all ', 'Minimalistic'); ?></li>
         <?php
         $terms = get_terms(array( /* select project_category taxonomy  */
             'taxonomy'   => 'project_category',
@@ -30,7 +30,7 @@ get_header() ?>
         <?php
             endforeach;
         else :
-            esc_html_e('No custom taxonomies found.', 'text-domain');
+            esc_html_e('No custom taxonomies found.', 'Minimalistic');
         endif;
         ?>
     </ul>
@@ -60,7 +60,7 @@ get_header() ?>
         endwhile;
         wp_reset_postdata(); // Required after every custom query loop
     else :
-        esc_html_e('No posts found.', 'text-domain');
+        esc_html_e('No posts found.', 'Minimalistic');
     endif;
     ?>
 </section>

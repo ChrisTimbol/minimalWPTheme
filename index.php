@@ -11,7 +11,7 @@ get_header();
     while (have_posts()) :
       the_post();
   ?>
-      <article class="post-container">
+      <article class="post-container" <?php post_class(); ?>>
         <header class="post-header">
           <h2>
             <a class="post-title" href="<?php echo esc_url(get_permalink()); ?>">
@@ -41,10 +41,11 @@ get_header();
       <?php
       the_posts_pagination(array(
         'mid_size'  => 2,
-        'prev_text' => __('« Previous', 'text-domain'),
-        'next_text' => __('Next »', 'text-domain'),
+        'prev_text' => __('« Previous', 'Minimalistic'),
+        'next_text' => __('Next »', 'Minimalistic'),
       ));
       ?>
+      
     </div>
   <?php endif;
   ?>

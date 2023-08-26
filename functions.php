@@ -3,6 +3,8 @@
  *  Adds functionality to WP theme
  */
 
+
+add_theme_support( 'title-tag' );
 add_theme_support('post-thumbnails'); /* Allow post-thumbnails , main usage is for portfolio images */
 function theme_files() { /* this function is use to enqueue Styling, fonts, and .js scripts into wordpress */
     // css files 
@@ -34,13 +36,13 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
 add_action('wp_enqueue_scripts', 'theme_files'); 
 function register_project_post_type() { // adds project post type to admin bar
     $labels = array(
-        'name'                  => _x('Projects', 'Post Type General Name', 'text-domain'),
-        'singular_name'         => _x('Projects', 'Post Type Singular Name', 'text-domain'),
+        'name'                  => _x('Projects', 'Post Type General Name', 'Minimalistic'),
+        'singular_name'         => _x('Projects', 'Post Type Singular Name', 'Minimalistic'),
     );
     $args = array(
-        'label' => __('Projects', 'text-domain'),
+        'label' => __('Projects', 'Minimalistic'),
         'labels'                => $labels,
-        'description' => __('a place for project items', 'text-domain'),
+        'description' => __('a place for project items', 'Minimalistic'),
         'public' => true,
         'hierarchical' => false,
         'show_ui'               => true,
@@ -95,7 +97,7 @@ add_action( 'widgets_init', 'my_custom_sidebars_init' );
 function register_my_menus() { /* Register a menu locationfor user to edit */
     register_nav_menus(
         array(
-            'primary' => __('Primary Menu', 'text-domain'), // creates a header-menu var location to refer to in wp
+            'primary' => __('Primary Menu', 'Minimalistic'), // creates a header-menu var location to refer to in wp
         )
     );
 }
@@ -107,7 +109,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 function my_footer_menu() { /* Menu for footer layout */
-    register_nav_menu('footer-menu', __( 'Footer Menu', 'text-domain'));
+    register_nav_menu('footer-menu', __( 'Footer Menu', 'Minimalistic'));
 }
 add_action('init', 'my_footer_menu');
 
@@ -124,3 +126,10 @@ function custom_excerpt_ellipsis( $more ) {
     return '';
 }
 add_filter( 'excerpt_more', 'custom_excerpt_ellipsis' );
+
+
+function my_theme_setup() {
+    // Add default posts and comments RSS feed links to head.
+    add_theme_support( 'automatic-feed-links' );
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );

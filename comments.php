@@ -36,14 +36,14 @@ if (post_password_required()) {
         // If comments are closed and there are comments, let's leave a note.
         if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
         ?>
-            <p class="no-comments"><?php _e('Comments are closed.', 'text-domain'); ?></p>
+            <p class="no-comments"><?php _e('Comments are closed.', 'Minimalistic'); ?></p>
         <?php endif; ?>
 
     <?php endif; ?>
     <?php
     $args = array(
         'class_submit' => 'submit-button', // Adding a custom class to the submit button
-        'label_submit' => __('Post Comment', 'text-domain'), // Label for the submit button
+        'label_submit' => __('Post Comment', 'Minimalistic'), // Label for the submit button
     );
     comment_form($args);
 ?>
