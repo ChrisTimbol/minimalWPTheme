@@ -28,11 +28,9 @@ body {
     margin: 0.5rem;
     padding: 1rem;
     min-height: 25vh;
- 
 }
 .post-header {
     display: flex;
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
