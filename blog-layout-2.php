@@ -4,19 +4,14 @@
 */
 get_header();
 ?>
-<div class="blog-layout-2-container">
-    <aside class="main-sidebar">
-        <?php if (is_active_sidebar('blog-sidebar')) : ?>
-            <?php dynamic_sidebar('blog-sidebar'); ?>
-        <?php else : ?>
-            <p>Please add widgets to the sidebar.</p>
-        <?php endif; ?>
-    </aside>
-    <main class="blog-container-2">
-        <?php
-        if (have_posts()) :
-            while (have_posts()) :
-                the_post();
+<main class="blog-layout-2-container">
+    <section class="blog-container-2">
+        <?php $query = new WP_Query(array(
+            'post_type'      => 'post',
+            'posts_per_page' => -1,
+        ));
+        if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
         ?>
                 <article class="post-container">
                     <header class="post-header">
@@ -45,5 +40,26 @@ get_header();
             endwhile;
         endif;
         ?>
-</div>
+        <div class="pagination-wrapper">
+            <?php
+            the_posts_pagination(array(
+                'mid_size'           => 2,
+                'prev_text'          => __('&laquo; Previous', 'text-domain'),
+                'next_text'          => __('Next &raquo;', 'text-domain'),
+                'screen_reader_text' => __('Posts Navigation', 'text-domain'),
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
+            ));
+            ?>
+        </div>
+    </section>
+    
+    <aside class="main-sidebar">
+        <?php if (is_active_sidebar('blog-sidebar')) : ?>
+            <?php dynamic_sidebar('blog-sidebar'); ?>
+        <?php else : ?>
+            <p>Please add widgets to the sidebar.</p>
+        <?php endif; ?>
+    </aside>
+
+</main>
 <?php get_footer(); ?>

@@ -52,10 +52,20 @@ get_header();
             </section>
     <?php
         endwhile;
-        the_posts_pagination();
     else :
         echo '<p>No posts found for this archive.</p>';
     endif;
     ?>
+    <div class="pagination-wrapper">
+        <?php
+        the_posts_pagination(array(
+            'mid_size'           => 2,
+            'prev_text'          => __('&laquo; Previous', 'text-domain'),
+            'next_text'          => __('Next &raquo;', 'text-domain'),
+            'screen_reader_text' => __('Posts Navigation', 'text-domain'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
+        ));
+        ?>
+    </div>
 </section>
 <?php get_footer(); ?>

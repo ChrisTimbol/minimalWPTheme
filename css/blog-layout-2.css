@@ -3,10 +3,11 @@
     min-height: 80vh;
 }
 .main-sidebar{
-    order: 2;
     width: 20%;
+ 
 }
 .blog-container-2 {
-    order: 1;
+
     width: 80%;
+
 }

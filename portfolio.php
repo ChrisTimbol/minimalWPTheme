@@ -72,6 +72,6 @@ get_header() ?>
 <?php
         endif;
 ?>
-
+<!-- Requires different pagination for custom taxonomy? -->
 </section>
 <?php get_footer(); ?>

@@ -46,5 +46,8 @@ if (post_password_required()) {
         'label_submit' => __('Post Comment', 'Minimalistic'), // Label for the submit button
     );
     comment_form($args);
+
+
 ?>
 </section>
+
