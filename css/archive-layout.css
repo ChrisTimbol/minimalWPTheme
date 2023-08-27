@@ -1,4 +1,8 @@
-
+.archive-page-container { 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
 .archive-column {
     display: flex;
     flex-direction: column;

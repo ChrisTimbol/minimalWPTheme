@@ -1,7 +1,6 @@
-.archive-container {
+.archive-container { 
+    margin-top: 4rem;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
 }
 .archive-header {
     display: flex;

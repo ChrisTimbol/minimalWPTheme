@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<section class="archive-container">
+<main class="archive-container">
     <header class="archive-header">
         <h2 class="archive-title">
             <?php
@@ -30,42 +30,49 @@ get_header();
     if (have_posts()) :
         while (have_posts()) : the_post();
     ?>
-            <section class="post-container" <?php post_class(); ?>>
-                <header class="post-header">
-                    <h2>
-                        <a class="title" href="<?php esc_url(the_permalink()); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h2>
-                    <p class="date-category">
-                        Posted in <?php echo get_the_category_list(', '); ?> on
-                        <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
-                            <?php the_time('F j, Y'); ?>
-                        </a>
-                        by <?php the_author_posts_link(); ?>
-                        <a href="<?php echo esc_url(get_comments_link()); ?>">
-                            <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?>
-                        </a>
-                    </p>
-                </header>
-                <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
-            </section>
+     <article class="post-container">
+        <header class="post-header">
+          <h2>
+            <a class="post-title" href="<?php echo esc_url(get_permalink()); ?>">
+              <?php the_title(); ?>
+            </a>
+          </h2>
+          <div class="post-meta">
+            <span class="post-category">posted in <?php echo get_the_category_list(', '); ?> on</span>
+            <time class="post-date" datetime="<?php echo get_the_date('c'); ?>">
+              on <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
+                <?php the_time('F j, Y'); ?>
+              </a>
+              <span class="post-author">by <?php the_author_posts_link(); ?></span>
+              <span class="post-comments">
+                <a href="<?php echo esc_url(get_comments_link()); ?>">
+                  <?php comments_number('0 comments', '1 comment', '% comments'); ?>
+                </a>
+              </span>
+          </div>
+
+        </header>
+        <div class="post-description">
+          <?php the_excerpt(); ?>
+        </div>
+        <a class="continueButton" href="<?php the_permalink(); ?>">Continue reading -></a>
+      </article>
+
+  <?php
+    endwhile;
+  endif;
+  ?>
+  <div class="pagination-wrapper">
     <?php
-        endwhile;
-    else :
-        echo '<p>No posts found for this archive.</p>';
-    endif;
+    the_posts_pagination(array(
+      'mid_size'           => 2,
+      'prev_text'          => __('&laquo; Previous', 'text-domain'),
+      'next_text'          => __('Next &raquo;', 'text-domain'),
+      'screen_reader_text' => __('Posts Navigation', 'text-domain'),
+      'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
+    ));
     ?>
-    <section class="pagination-wrapper">
-        <?php
-        the_posts_pagination(array(
-            'mid_size'           => 2,
-            'prev_text'          => __('&laquo; Previous', 'text-domain'),
-            'next_text'          => __('Next &raquo;', 'text-domain'),
-            'screen_reader_text' => __('Posts Navigation', 'text-domain'),
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
-        ));
-        ?>
-    </section>
-</section>
+  </div>
+
+</main>
 <?php get_footer(); ?>

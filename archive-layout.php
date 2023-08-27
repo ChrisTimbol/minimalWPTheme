@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<section class="archive-container">
+<section class="archive-page-container">
     <section class="archive-column">
         <h2>Post Archives</h2>
         <ul class="archive-list">
