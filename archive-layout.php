@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<section class="archive-page-container">
+<main class="archive-page-container">
     <section class="archive-column">
         <h2>Post Archives</h2>
         <ul class="archive-list">
@@ -55,6 +55,6 @@ get_header();
         ));
         ?>
     </section>
-</section>
+</main>
 
 <?php get_footer(); ?>
