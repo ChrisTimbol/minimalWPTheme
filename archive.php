@@ -56,7 +56,7 @@ get_header();
         echo '<p>No posts found for this archive.</p>';
     endif;
     ?>
-    <div class="pagination-wrapper">
+    <section class="pagination-wrapper">
         <?php
         the_posts_pagination(array(
             'mid_size'           => 2,
@@ -66,6 +66,6 @@ get_header();
             'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
         ));
         ?>
-    </div>
+    </section>
 </section>
 <?php get_footer(); ?>

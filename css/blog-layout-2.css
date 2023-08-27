@@ -1,13 +1,10 @@
-.blog-layout-2-container {
+.blog-container-with-sidebar {
     display: flex;
-    min-height: 80vh;
-}
-.main-sidebar{
-    width: 20%;
- 
+    min-height: 100vh;
 }
 .blog-container-2 {
-
     width: 80%;
-
+}
+.blog-container-sidebar {
+    width: 20%;
 }

@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Blog layout no sidebar( same as index.php)
+* Template Name: Blog layout no sidebar( same as index.php but with wp_query)
 *
 */
 get_header();
@@ -47,7 +47,7 @@ get_header();
     wp_reset_postdata();
   endif;
   ?>
-  <div class="pagination-wrapper">
+  <section class="pagination-wrapper">
     <?php
     the_posts_pagination(array(
       'mid_size'           => 2,
@@ -57,7 +57,7 @@ get_header();
       'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
     ));
     ?>
-  </div>
+  </section>
 
 </main>
 <?php get_footer(); ?>
