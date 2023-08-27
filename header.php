@@ -31,7 +31,6 @@
                         'theme_location' => 'primary', 
                         'container' => false,
                         'menu_class' => 'site-nav-list',
-             
                     )
                 );
                 ?>
