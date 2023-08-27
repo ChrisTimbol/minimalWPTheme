@@ -6,7 +6,6 @@ h2 {
     font-size: 2rem;
 }
 body {
-    /* width: 1366px; */
     font-family: "Coustard", Georgia, serif;
     display: flex; 
     flex-direction: column;
@@ -19,15 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.date-category {
-    font-size: 0.8rem;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 2rem;
-}
-.date-category a:hover {
-    background: #f0f0f0;
 }
 .post-container {
     display: flex;
@@ -43,15 +33,26 @@ body {
     align-items: center;
     justify-content: center;
 }
-.post-title {
-    
+.post-meta {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2rem;
 }
-
+.post-meta a:hover {
+    background: #f0f0f0;
+}
+.continueButton {
+    text-align: center;
+    padding: 1rem 2.5rem 0.5rem 2.5rem;
+    color: #444;
+    font-weight: 400;
+    border-bottom: 1px dotted #ccc;
+    letter-spacing: 2px;
+}
 .continueButton:hover {
     background: #f0f0f0;
     transition: background-color 0.3s;
-}
-.post-description {
 }
 .pagination {
     display: flex;
@@ -73,14 +74,4 @@ body {
     background-color: #0073aa; 
     color: #fff;
     border-color: #0073aa;
-}
-.continueButton {
-    text-align: center;
-    padding: 1rem 2.5rem 0.5rem 2.5rem;
-    color: #444;
-    font-weight: 400;
-    border-bottom: 1px dotted #ccc;
-    letter-spacing: 2px;
-}
-@media (min-width: 600px) and(max-width: 1024px) {
 }
