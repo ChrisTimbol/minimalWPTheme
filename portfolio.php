@@ -3,7 +3,7 @@
  *
  */
 get_header() ?>
-<section class="portfolio-container">
+<main class="portfolio-container">
     <?php
     if (have_posts()) :
         while (have_posts()) : the_post();
@@ -54,11 +54,13 @@ get_header() ?>
 
                         <?php foreach ($categories as $category) : ?>
                             <span class="category-label"><?php echo esc_html($category->slug); ?></span>
-                        
+
                         <?php endforeach; ?>
                     <?php endif; ?>
-                <div class="project-title"><?php the_title(); ?> </div>
-                    <div class="project-description"><?php the_excerpt(); ?></div>
+                    <div class="project-info">
+                        <div class="project-title"><?php the_title(); ?> </div>
+                        <div class="project-description"><?php the_excerpt(); ?></div>
+                    </div>
                 </a>
             <?php
             endwhile;
@@ -73,5 +75,5 @@ get_header() ?>
         endif;
 ?>
 <!-- Requires different pagination for custom taxonomy? -->
-</section>
+</main>
 <?php get_footer(); ?>
