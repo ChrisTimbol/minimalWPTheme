@@ -16,7 +16,8 @@
     border-bottom: 1px dotted #ccc;
     display: flex;
     justify-content: center; 
-    width: 90vw;
+/*     width: 90vw; */
+padding: 1rem;
     color: rgb(68, 68, 68); 
     font-size: 4.4rem;
 }
@@ -163,5 +164,11 @@
         display: flex;
         padding: 0.75rem;
         align-self: flex-end;
+    }
+}
+
+@media  (max-width: 480px) {
+    .site-title {
+        font-size: 3.5rem;
     }
 }
