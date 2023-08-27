@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Blog layout no sidebar( same as index.php but with wp_query)
+* Template Name: Blog layout without sidebar
 *
 */
 get_header();

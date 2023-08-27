@@ -18,7 +18,7 @@ function theme_files() { /* this function is use to enqueue Styling, fonts, and 
     wp_enqueue_style('comments-style', get_theme_file_uri('/css/comments.css'));
     wp_enqueue_style('single-style', get_theme_file_uri('/css/single.css'));
     wp_enqueue_style('searchform-style', get_theme_file_uri('/css/searchform.css'));
-    wp_enqueue_style('blog-layout-2-style', get_theme_file_uri('/css/blog-layout-2.css'));
+    wp_enqueue_style('blog-layout-2-style', get_theme_file_uri('/css/blog-with-sidebar.css'));
     wp_enqueue_style('archive-layout-style', get_theme_file_uri('/css/archive-layout.css'));
     wp_enqueue_style('four-style', get_theme_file_uri('/css/404.css'));
     // Enqueue Google Fonts

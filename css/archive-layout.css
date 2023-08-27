@@ -1,25 +1,23 @@
-.archive-layout-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: flex-start;
-    min-height: 75vh;
-}
 
 .archive-column {
-    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
-
-.archive-column h2 {
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333; 
-    padding-bottom: 10px;
+.archive-column > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    margin: 0;
+    margin-top: 4rem;
 }
-
-.archive-column-item:hover  {
+.archive-list  li:hover {
     background: #ccc;
+    cursor: pointer;
 }
-
-li:empty { 
+li:empty { /* Get read of empty bullets */
     display: none;
 }

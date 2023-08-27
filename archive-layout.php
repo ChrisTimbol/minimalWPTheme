@@ -1,15 +1,14 @@
 <?php
-
-/**
- * Template Name: Archive page layout for individual dates etc
- */
+/*
+ Template Name: Archive page layout 
+*/
 get_header();
 ?>
 
-<section class="archive-layout-container">
+<section class="archive-container">
     <section class="archive-column">
         <h2>Post Archives</h2>
-        <ul>
+        <ul class="archive-list">
             <?php
             $args = array(
                 'type'            => 'monthly',
@@ -27,7 +26,7 @@ get_header();
     </section>
     <section class="archive-column">
         <h2>Pages</h2>
-        <ul>
+        <ul class="archive-list">
             <?php
             wp_list_pages(array(
                 'title_li' => '',
@@ -37,7 +36,7 @@ get_header();
     </section>
     <section class="archive-column">
         <h2>Categories</h2>
-        <ul>
+        <ul class="archive-list">
             <?php
             wp_list_categories(array(
                 'title_li' => '',
@@ -45,17 +44,17 @@ get_header();
             ?>
         </ul>
     </section>
-    <div class="pagination-wrapper">
-    <?php
-    the_posts_pagination(array(
-        'mid_size'           => 2,
-        'prev_text'          => __('&laquo; Previous', 'text-domain'),
-        'next_text'          => __('Next &raquo;', 'text-domain'),
-        'screen_reader_text' => __('Posts Navigation', 'text-domain'),
-        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
-    ));
-    ?>
-</div>
+    <section class="pagination-wrapper">
+        <?php
+        the_posts_pagination(array(
+            'mid_size'           => 2,
+            'prev_text'          => __('&laquo; Previous', 'text-domain'),
+            'next_text'          => __('Next &raquo;', 'text-domain'),
+            'screen_reader_text' => __('Posts Navigation', 'text-domain'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
+        ));
+        ?>
+    </section>
 </section>
 
 <?php get_footer(); ?>
