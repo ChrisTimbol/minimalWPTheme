@@ -108,15 +108,11 @@ function wpdocs_custom_excerpt_length($length)
     return 20;
 }
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
-
-
 function my_footer_menu()
 { /* Menu for footer layout */
     register_nav_menu('footer-menu', __('Footer Menu', 'Minimalistic'));
 }
 add_action('init', 'my_footer_menu');
-
-
 function custom_excerpt_length($length)
 {
     if (get_post_type() == 'project') { /* Limits project post excerpt length */
@@ -125,17 +121,14 @@ function custom_excerpt_length($length)
     return $length;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
-
 function custom_excerpt_ellipsis($more) /* Removes the [...] from end of excerpt */
 {
     return '';
 }
 add_filter('excerpt_more', 'custom_excerpt_ellipsis');
-
-
-function my_theme_setup() /*  ? */
+function my_theme_setup() 
 {
-    // Add default posts and comments RSS feed links to head.
+   
     add_theme_support('automatic-feed-links');
 }
 add_action('after_setup_theme', 'my_theme_setup');
