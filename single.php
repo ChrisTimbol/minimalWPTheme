@@ -5,13 +5,13 @@
  */
 get_header();
 ?>
-<section class="single-container">
+<section class="blog-container">
   <?php
   if (have_posts()) :
     while (have_posts()) :
       the_post(); // Sets up the global post data. More on this below.
   ?>
-      <article class="single-article-container" <?php post_class(); ?>>
+      <article class="post-container" <?php post_class(); ?>>
         <h2 class="post-title" >
           <a ref="<?php echo esc_url(get_permalink()); ?>">
             <?php the_title(); ?>
