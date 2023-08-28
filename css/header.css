@@ -93,6 +93,7 @@ padding: 1rem;
     top: 0;
     left: 100%; /* Position to the right of the parent sub-menu */
 }
+
 .hamburger-menu {
     width: 2rem;
     height: 1.5rem;
