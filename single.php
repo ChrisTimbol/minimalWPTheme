@@ -17,7 +17,7 @@ get_header();
             <?php the_title(); ?>
           </a>
         </h2>
-        <div class="si-meta">
+        <div class="post-meta">
           <span class="post-category">posted in <?php echo get_the_category_list(', '); ?> on</span>
           <time class="post-date" datetime="<?php echo get_the_date('c'); ?>">
             on <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
