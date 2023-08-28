@@ -12,16 +12,27 @@ get_header();
       the_post(); // Sets up the global post data. More on this below.
   ?>
       <article class="single-article-container" <?php post_class(); ?>>
-        This is using single.php
-        <h2 class="page-title"><?php the_title(); ?></h2>
-        <p class="date-category">
-          posted in <?php echo get_the_category_list(', '); ?> on
-          <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
-            <?php the_time('F j, Y'); ?>
+        <h2 class="post-title" >
+          <a ref="<?php echo esc_url(get_permalink()); ?>">
+            <?php the_title(); ?>
           </a>
-          by <?php the_author_posts_link(); ?>
-        <p>
-          <?php the_content(); ?>
+        </h2>
+        <div class="post-meta">
+          <span class="post-category">posted in <?php echo get_the_category_list(', '); ?> on</span>
+          <time class="post-date" datetime="<?php echo get_the_date('c'); ?>">
+            on <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
+              <?php the_time('F j, Y'); ?>
+            </a>
+            <span class="post-author">by <?php the_author_posts_link(); ?></span>
+            <span class="post-comments">
+              <a href="<?php echo esc_url(get_comments_link()); ?>">
+                <?php comments_number('0 comments', '1 comment', '% comments'); ?>
+              </a>
+            </span>
+
+        </div>
+
+        <?php the_content(); ?>
         </p>
       </article>
     <?php endwhile; ?>
@@ -31,10 +42,8 @@ get_header();
     'before' => '<div class="page-links">' . esc_html__('Pages:', 'Minimalistic'),
     'after'  => '</div>',
   ));
-
   ?>
   <?php
-
   // Include the comments template
   if (comments_open() || get_comments_number()) {
     comments_template();

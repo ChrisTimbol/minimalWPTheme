@@ -13,8 +13,8 @@ get_header();
   ?>
       <article class="post-container">
         <header class="post-header">
-          <h2>
-            <a class="post-title" href="<?php echo esc_url(get_permalink()); ?>">
+          <h2 class="post-title" >
+            <a href="<?php echo esc_url(get_permalink()); ?>">
               <?php the_title(); ?>
             </a>
           </h2>

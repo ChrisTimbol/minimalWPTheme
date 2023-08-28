@@ -8,15 +8,15 @@ get_header();
 if (have_posts()) :
     while (have_posts()) : the_post();
 ?>
-        <section class="page-container" <?php post_class(); ?>>
+        <main class="page-container" <?php post_class(); ?>>
             <header class="page-header">
                 <h2 class="page-title">
                     <?php the_title(); ?>
                 </h2>
             </header>
-            <article class="page-content">
+            <section class="page-content">
                 <?php the_content(); ?>
-            </article>
+            </section>
     <?php
     endwhile;
 else :
@@ -30,5 +30,5 @@ endif;
     ));
 
     ?>
-        </section>
+        </main>
         <?php get_footer(); ?>
