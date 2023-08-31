@@ -47,10 +47,10 @@ get_header();
         <?php
         the_posts_pagination(array(
             'mid_size'           => 2,
-            'prev_text'          => __('&laquo; Previous', 'text-domain'),
-            'next_text'          => __('Next &raquo;', 'text-domain'),
-            'screen_reader_text' => __('Posts Navigation', 'text-domain'),
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
+            'prev_text'          => __('&laquo; Previous', 'Minimalistic'),
+            'next_text'          => __('Next &raquo;', 'Minimalistic'),
+            'screen_reader_text' => __('Posts Navigation', 'Minimalistic'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'Minimalistic') . ' </span>',
         ));
         ?>
     </div>

@@ -63,10 +63,10 @@ function get_archive_title() {
         <?php
         the_posts_pagination(array(
             'mid_size'           => 2,
-            'prev_text'          => __('&laquo; Previous', 'minimalistic'),
-            'next_text'          => __('Next &raquo;', 'minimalistic'),
-            'screen_reader_text' => __('Posts Navigation', 'minimalistic'),
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'text-domain') . ' </span>',
+            'prev_text'          => __('&laquo; Previous', 'Minimalistic'),
+            'next_text'          => __('Next &raquo;', 'Minimalistic'),
+            'screen_reader_text' => __('Posts Navigation', 'Minimalistic'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'Minimalistic') . ' </span>',
         ));
         ?>
     </div>
