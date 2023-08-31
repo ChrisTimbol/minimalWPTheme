@@ -16,7 +16,7 @@
     border-bottom: 1px dotted #ccc;
     display: flex;
     justify-content: center; 
-/*     width: 90vw; */
+
 padding: 1rem;
     color: rgb(68, 68, 68); 
     font-size: 4.4rem;
@@ -58,10 +58,10 @@ padding: 1rem;
     padding: 1rem;
     margin: 0;
 }
-.site-nav-list li:hover   {
-    background-color: #f0f0f0;
-} 
-
+.site-nav-list li:hover {
+   background: #ccc;
+}
+ 
 /* Hide sub-menus by default */
 .sub-menu {
     display: none;
