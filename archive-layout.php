@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Archive page layout 
+ * Template Name: Archive 3 column page layout
  */
 get_header();
 ?>
