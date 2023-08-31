@@ -3,6 +3,11 @@ a {
     color: inherit;
 
 }
+
+a:hover {
+    background: #ccc;
+    cursor: pointer;
+} 
 h2 {
     font-size: 2rem;
 }
