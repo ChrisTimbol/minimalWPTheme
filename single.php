@@ -35,7 +35,7 @@ get_header();
                 <?php
                 // Display page links for paginated posts
                 wp_link_pages(array(
-                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'Minimalistic'),
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'minimalistic'),
                     'after'  => '</div>',
                 ));
                 ?>

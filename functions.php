@@ -35,13 +35,13 @@ add_action('wp_enqueue_scripts', 'theme_files');
 function register_project_post_type()
 { // adds project post type to admin bar
     $labels = array(
-        'name'                  => _x('Projects', 'Post Type General Name', 'Minimalistic'),
-        'singular_name'         => _x('Projects', 'Post Type Singular Name', 'Minimalistic'),
+        'name'                  => _x('Projects', 'Post Type General Name', 'minimalistic'),
+        'singular_name'         => _x('Projects', 'Post Type Singular Name', 'minimalistic'),
     );
     $args = array(
-        'label' => __('Projects', 'Minimalistic'),
+        'label' => __('Projects', 'minimalistic'),
         'labels'                => $labels,
-        'description' => __('a place for project items', 'Minimalistic'),
+        'description' => __('a place for project items', 'minimalistic'),
         'public' => true,
         'hierarchical' => false,
         'show_ui'               => true,
@@ -99,7 +99,7 @@ function register_my_menus()
 { /* Register a menu location for user to select in admin menu */
     register_nav_menus(
         array(
-            'primary' => __('Header Menu', 'Minimalistic'),
+            'primary' => __('Header Menu', 'minimalistic'),
         )
     );
 }
@@ -111,7 +111,7 @@ function wpdocs_custom_excerpt_length($length)
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 function my_footer_menu()
 { /* Menu for footer layout */
-    register_nav_menu('footer-menu', __('Footer Menu', 'Minimalistic'));
+    register_nav_menu('footer-menu', __('Footer Menu', 'minimalistic'));
 }
 add_action('init', 'my_footer_menu');
 function custom_excerpt_length($length)

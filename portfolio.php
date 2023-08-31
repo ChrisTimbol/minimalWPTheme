@@ -22,7 +22,7 @@ get_header();
 
         if ($terms && !is_wp_error($terms)) :
         ?>
-            <li class="category-term" data-category="all"><?php esc_html_e(' all ', 'Minimalistic'); ?></li>
+            <li class="category-term" data-category="all"><?php esc_html_e(' all ', 'minimalistic'); ?></li>
 
             <?php foreach ($terms as $term) : ?>
                 <li class="category-term" data-category="<?php echo esc_attr($term->slug); ?>">
@@ -63,7 +63,7 @@ get_header();
     </section>
 
     <div class="noPost">
-        <?php esc_html_e('No posts found.', 'Minimalistic'); ?>
+        <?php esc_html_e('No posts found.', 'minimalistic'); ?>
     </div>
     <?php endif; ?>
 
