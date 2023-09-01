@@ -44,11 +44,6 @@ function get_archive_title() {
                             </a>
                         </time>
                         <span class="post-author">by <?php the_author_posts_link(); ?></span>
-                        <span class="post-comments">
-                            <a href="<?php echo esc_url(get_comments_link()); ?>">
-                                <?php comments_number('0 comments', '1 comment', '% comments'); ?>
-                            </a>
-                        </span>
                     </div>
                 </header>
                 <div class="post-description">

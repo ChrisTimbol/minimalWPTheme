@@ -21,6 +21,8 @@ function theme_files()
     wp_enqueue_style('blog-with-sidebar-style', get_theme_file_uri('/css/blog-with-sidebar.css'));
     wp_enqueue_style('archive-layout-style', get_theme_file_uri('/css/archive-layout.css'));
     wp_enqueue_style('four-style', get_theme_file_uri('/css/404.css'));
+    wp_enqueue_style('single-style', get_theme_file_uri('/css/single.css'));
+
     // Enqueue Google Fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
     // Only include the script on the portfolio template page

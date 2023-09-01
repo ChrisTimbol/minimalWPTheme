@@ -10,6 +10,7 @@ get_header();
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
             <article class="post-container" <?php post_class(); ?>>
+            <div class="single-post-container">
                 <h2 class="post-title">
                     <a href="<?php echo esc_url(get_permalink()); ?>">
                         <?php the_title(); ?>
@@ -23,11 +24,7 @@ get_header();
                         </a>
                     </time>
                     <span class="post-author">by <?php the_author_posts_link(); ?></span>
-                    <span class="post-comments">
-                        <a href="<?php echo esc_url(get_comments_link()); ?>">
-                            <?php comments_number('0 comments', '1 comment', '% comments'); ?>
-                        </a>
-                    </span>
+
                 </div>
 
                 <?php the_content(); ?>
@@ -39,14 +36,18 @@ get_header();
                     'after'  => '</div>',
                 ));
                 ?>
-
-                <?php
-                // Include the comments template
-                if (comments_open() || get_comments_number()) {
-                    comments_template();
-                }
-                ?>
+                </div>
+                <div class="post-comments">
+                    <?php
+                    // Include the comments template
+                    if (comments_open() || get_comments_number()) {
+                        comments_template();
+                    }
+                    ?>
+                </div>
             </article>
+
+
         <?php endwhile; ?>
     <?php endif; ?>
 

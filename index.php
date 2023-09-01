@@ -13,7 +13,7 @@ get_header();
   ?>
       <article class="post-container">
         <header class="post-header">
-          <h2 class="post-title" >
+          <h2 class="post-title">
             <a href="<?php echo esc_url(get_permalink()); ?>">
               <?php the_title(); ?>
             </a>
@@ -25,11 +25,11 @@ get_header();
                 <?php the_time('F j, Y'); ?>
               </a>
               <span class="post-author">by <?php the_author_posts_link(); ?></span>
-              <span class="post-comments">
+              <div class="post-comments">
                 <a href="<?php echo esc_url(get_comments_link()); ?>">
                   <?php comments_number('0 comments', '1 comment', '% comments'); ?>
                 </a>
-              </span>
+              </div>
           </div>
 
         </header>
