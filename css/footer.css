@@ -24,3 +24,8 @@
     text-decoration: underline;
     background-color: #ccc;
 }
+
+.footer-menu li a {
+    display: flex;
+    justify-content: center;
+}

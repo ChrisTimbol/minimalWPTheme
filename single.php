@@ -36,6 +36,7 @@ get_header();
                                 <?php wp_link_pages(); ?><!-- enables paginated posts quicktag -->
                             </div>
                     </div>
+                    </div>
                     <div class="post-comments">
                         <?php
                         // Include the comments template
@@ -43,7 +44,7 @@ get_header();
                             comments_template();
                         }
                         ?>
-                    </div>
+                
 
             </article>
 

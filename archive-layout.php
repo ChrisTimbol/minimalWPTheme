@@ -26,18 +26,6 @@ get_header();
             </ul>
         </section>
 
-        <!-- Pages Section -->
-        <section class="archive-column">
-            <h2>Pages</h2>
-            <ul class="archive-list">
-                <?php
-                wp_list_pages(array(
-                    'title_li' => '',
-                ));
-                ?>
-            </ul>
-        </section>
-
         <!-- Categories Section -->
         <section class="archive-column">
             <h2>Categories</h2>
@@ -50,6 +38,17 @@ get_header();
             </ul>
         </section>
 
+        <!-- Pages Section -->
+        <section class="archive-column">
+            <h2>Pages</h2>
+            <ul class="archive-list">
+                <?php
+                wp_list_pages(array(
+                    'title_li' => '',
+                ));
+                ?>
+            </ul>
+        </section>
         <!-- Pagination Section -->
         <section class="pagination-wrapper">
             <?php
