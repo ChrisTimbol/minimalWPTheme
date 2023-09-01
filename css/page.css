@@ -4,6 +4,7 @@
     align-items: center;
     margin: 0;
     margin-top: 4rem;
+    font-family: "Coustard", Georgia, serif;
 }
 .page-header {
     display: flex;
