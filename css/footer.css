@@ -1,6 +1,5 @@
 .site-footer {
-    display: flex;
-    justify-content: center;
+
     width: 100%;
     height: 25vh;
     border-top: 1px solid #ccc;
@@ -9,7 +8,7 @@
 }
 .footer-menu {
     display: flex;
-    flex-direction: row; /* Change to row for horizontal layout */
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;

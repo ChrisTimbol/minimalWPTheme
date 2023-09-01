@@ -12,9 +12,9 @@ get_header();
             <article class="post-container" <?php post_class(); ?>>
                 <div class="single-post-container">
                     <h2 class="post-title">
-                        <a href="<?php echo esc_url(get_permalink()); ?>">
-                            <?php the_title(); ?>
-                        </a>
+
+                        <?php the_title(); ?>
+
                     </h2>
                     <div class="post-meta">
                         <span class="post-category">posted in <?php echo get_the_category_list(', '); ?> on</span>
@@ -22,25 +22,28 @@ get_header();
                             on <a href="<?php echo esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))); ?>">
                                 <?php the_time('F j, Y'); ?>
                             </a>
-                        </time>
-                        <span class="post-author">by <?php the_author_posts_link(); ?></span>
+                            <span class="post-author">by <?php the_author_posts_link(); ?></span>
+                            <div class="post-comments">
+                                <a href="<?php echo esc_url(get_comments_link()); ?>">
+                                    <?php comments_number('0 comments', '1 comment', '% comments'); ?>
+                                </a>
+                            </div>
 
+                            <div class="post-description">
+                                <?php the_content(); ?>
+                            </div>
+                            <div>
+                                <?php wp_link_pages(); ?><!-- enables paginated posts quicktag -->
+                            </div>
                     </div>
-                    <div class="post-content">
-                        <?php the_content(); ?>
+                    <div class="post-comments">
+                        <?php
+                        // Include the comments template
+                        if (comments_open() || get_comments_number()) {
+                            comments_template();
+                        }
+                        ?>
                     </div>
-                    <div>
-                        <?php wp_link_pages(); ?><!-- enables paginated posts quicktag -->
-                    </div>
-                </div>
-                <div class="post-comments">
-                    <?php
-                    // Include the comments template
-                    if (comments_open() || get_comments_number()) {
-                        comments_template();
-                    }
-                    ?>
-                </div>
 
             </article>
 

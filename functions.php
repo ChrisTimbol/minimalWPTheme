@@ -1,7 +1,7 @@
 <?php
-/* 
- *  Adds functionality to WP theme
- */
+/*
+  Adds functionality to WP theme
+*/
 
 /*  add_theme_support( "custom-header");
 add_theme_support('responsive-embeds'); */
