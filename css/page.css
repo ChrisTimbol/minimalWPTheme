@@ -18,7 +18,9 @@
 }
 
 p {
+    padding: 1rem;
     max-width: 900px;
+    letter-spacing: 2px;
 }
 .page-content {
     display: flex;
