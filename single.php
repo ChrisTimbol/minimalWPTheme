@@ -28,23 +28,22 @@ get_header();
                                     <?php comments_number('0 comments', '1 comment', '% comments'); ?>
                                 </a>
                             </div>
+                    </div>
+                    <div class="post-description">
+                        <?php the_content(); ?>
+                    </div>
+                    <div>
+                        <?php wp_link_pages(); ?><!-- enables paginated posts quicktag -->
+                    </div>
+                </div>
+                <div class="post-comments">
+                    <?php
+                    // Include the comments template
+                    if (comments_open() || get_comments_number()) {
+                        comments_template();
+                    }
+                    ?>
 
-                            <div class="post-description">
-                                <?php the_content(); ?>
-                            </div>
-                            <div>
-                                <?php wp_link_pages(); ?><!-- enables paginated posts quicktag -->
-                            </div>
-                    </div>
-                    </div>
-                    <div class="post-comments">
-                        <?php
-                        // Include the comments template
-                        if (comments_open() || get_comments_number()) {
-                            comments_template();
-                        }
-                        ?>
-                
 
             </article>
 
