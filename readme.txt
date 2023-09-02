@@ -1,17 +1,25 @@
-Minimalistic WordPress Theme
-Welcome to the Minimalistic WordPress theme — a blend of simplicity and functionality. Crafted with the intent of understanding the core structure of classic WordPress theme development, this theme embodies a clean, responsive layout without the need for additional plugins. Whether you're showcasing blog posts or portfolio projects, Minimalistic ensures a seamless presentation. As we evolve, expect periodic feature updates that enhance your experience even further.
+# Minimalistic WordPress Theme
 
-Getting Started
-Ensure you're working on a WordPress installation. Then, follow these steps to get your theme up and running:
+Welcome to the Minimalistic WordPress theme. Designed for simplicity and functionality, this theme offers a clean, responsive layout without the need for additional plugins. Ideal for showcasing blog posts or portfolio projects, and crafted to understand classic WordPress theme development. Periodic feature updates will enhance your experience.
 
-Installation
-Download & Install: Grab the theme and place it in your wp-content/themes directory.
-Activate: Navigate to Appearance > Themes in your WordPress dashboard, find "Minimalistic" and click "Activate".
-Configuration
-Import Sample Content: To get a feel of the theme, import the user test data from site-example.xml via Tools > Import > WordPress Importer.
-Personalize Your Site: Head over to Appearance > Customize > Site Identity to set up your site's title and tagline.
-Craft Your Content: Begin adding posts and categorizing them.
-Showcase Your Work: Add your projects and use the portfolio layout page template to categorize and display them beautifully.
-Utilize the Archive Layout: Implement the 3-column archive layout to display your content in a visually appealing manner.
-Blog Page Template: Use the dedicated page template for your blog, which comes with a customizable sidebar widget, allowing you to tailor the content and tools your readers see alongside your posts.
-Thank you for choosing Minimalistic. Dive in, explore, and make the digital space truly yours. For updates and support, stay tuned!
+## Getting Started
+
+Ensure you're on a WordPress installation and follow these steps:
+
+### Installation
+
+1. Download and place the theme in `wp-content/themes`.
+2. Go to `Appearance` > `Themes` and activate "Minimalistic".
+
+### Configuration
+
+3. Import sample data from `site-example.xml` via `Tools` > `Import` > `WordPress Importer`.
+4. Set your site's title and tagline at `Appearance` > `Customize` > `Site Identity`.
+5. Add and categorize your posts.
+6. Add projects and display them using the portfolio layout page template.
+7. Use the 3-column archive layout for a visually appealing content display.
+8. For your blog, there's a dedicated page template with a customizable sidebar widget.
+
+---
+
+Thanks for choosing Minimalistic. For updates and support, stay connected!
