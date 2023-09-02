@@ -1,7 +1,7 @@
 # Minimalistic WordPress Theme
 
 Welcome to the Minimalistic WordPress theme. Designed for simplicity and functionality, this theme offers a clean, responsive layout without the need for additional plugins. Ideal for showcasing blog posts or portfolio projects, and crafted to understand classic WordPress theme development. Periodic feature updates will enhance your experience.
-
+https://github.com/ChrisTimbol/minimalWPTheme/blob/main/screenshot.png
 ## Getting Started
 
 Ensure you're on a WordPress installation and follow these steps:
